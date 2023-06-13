@@ -1,6 +1,11 @@
 {
-  "devDependencies": {
-    "@open-domains/cli": "^1.0.1",
-    "live-server": "^1.2.2"
-  }
+	"devDependencies": {
+		"@open-domains/cli": "^1.0.1",
+		"http-server": "^14.1.1",
+		"live-server": "^1.2.2"
+	},
+	"scripts": {
+		"start": "npx http-server .",
+		"dev": "npx live-server ."
+	}
 }
