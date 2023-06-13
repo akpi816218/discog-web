@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@open-domains/cli": "^1.0.1",
+    "live-server": "^1.2.2"
+  }
+}
