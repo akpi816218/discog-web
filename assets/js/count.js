@@ -1,5 +1,5 @@
 fetch(
-	'https://cors-anywhere.herokuapp.com/https://discog.akpi816218.repl.co/api/',
+	'https://crossorigin.me/https://discog.akpi816218.repl.co/api/',
 	{
 		method: 'GET',
 		headers: [
