@@ -1,10 +1,10 @@
 fetch(
-	'https://crossorigin.me/https://discog.akpi816218.repl.co/api/',
+	'https://corsproxy.io/?https%3A%2F%2Fdiscog.akpi816218.repl.co%2Fapi',
 	{
 		method: 'GET',
 		headers: [
-			['Content-Type', 'application/json']
-			// ['Access-Control-Allow-Origin', '*']
+			['Content-Type', 'application/json'],
+			// ['Access-Control-Allow-Origin', '*'],
 		]
 	}
 )
