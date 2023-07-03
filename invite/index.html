@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>DisCog</title>
+		<link rel="shortcut icon" href="/assets/img/discog.png" type="image/png" />
+		<link rel="stylesheet" href="/assets/css/bulma.min.css" />
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<script src="/assets/js/jquery-3.6.0.js"></script>
+	</head>
+
+	<body>
+		<!-- Back To Top Start -->
+		<a id="backtotop" data-tippy-content="Back To Top.">
+			<i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
+		</a>
+		<!-- Back To Top End -->
+
+		<!-- Navbar Start -->
+		<nav class="navbar is-fixed-top pl-2 pr-3" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand mt-2 mb-2">
+				<a class="navbar-item" href="/#">
+					<img src="/assets/img/discog.png" width="28" height="28" />
+					<strong class="ml-3">DisCog</strong>
+				</a>
+
+				<a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
+					aria-expanded="false">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start">
+					<a href="/" class="navbar-item is-tab">Home</a>
+
+					<a href="/#features" class="navbar-item is-tab">Features</a>
+
+					<a href="/#stats" class="navbar-item is-tab">Stats</a>
+
+					<a href="/invite/#" class="navbar-item is-tab">Invite</a>
+				</div>
+
+				<div class="navbar-end">
+					<a href="/invite/support-server" class="navbar-item is-tab" target="_blank">
+						<i class="fa-brands fa-discord"></i>
+					</a>
+
+					<a href="https://github.com/akpi816218/discog" class="navbar-item is-tab" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar End -->
+
+		<!-- Hero Section Start -->
+		<section class="hero bg-base is-fullheight">
+			<div class="hero-head"></div>
+			<div class="hero-body">
+				<div class="mt-6 columns" data-aos="fade-left">
+					<div class="column has-image-centered">
+						<img class="image vert-move mt-4 has-image-centered" src="/assets/img/discog.png" alt="logo image"
+							style="width: 20rem" />
+					</div>
+					<div class="column has-text-right mt-12">
+						<h1 class="is-size-1 has-text-weight-bold has-text-white has-text-right">
+							Get your server ready for <strong class="blurple">DisCog</strong>!
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div class="has-text-centered hero-foot" data-tippy-content="Scroll Down">
+				<a href="#invite"><i class="fa-solid fa-circle-chevron-down fa-lg vert-move2 has-text-white"></i></a>
+			</div>
+		</section>
+		<!-- Hero Section End -->
+
+		<!-- Hero Waves Start -->
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#1a2634" fill-opacity="1"
+				d="M0,288L24,261.3C48,235,96,181,144,154.7C192,128,240,128,288,149.3C336,171,384,213,432,202.7C480,192,528,128,576,133.3C624,139,672,213,720,213.3C768,213,816,139,864,101.3C912,64,960,64,1008,106.7C1056,149,1104,235,1152,240C1200,245,1248,171,1296,144C1344,117,1392,139,1416,149.3L1440,160L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z">
+			</path>
+		</svg>
+		<!-- Hero Waves End -->
+
+		<!-- Invite Section Start -->
+		<section class="section mt-6 has-text-centered" id="invite">
+			<h2 class="title has-text-weight-bold is-size-3">
+				Are you convinced that <span class="blurple">DisCog</span> is the bot you're looking for?
+			</h2>
+			<p class="subtitle lined mt-4 mb-0 has-text-gray is-size-4">
+				You've got two options to get set up:
+			</p>
+			<div class="line3 line-center dark-blurple"></div>
+			<div class="columns mt-4 is-size-5">
+				<div class="column has-text-black">
+					Contact the developers directly through the support server. This is the simplest and
+					fastest way to get set up for all! When you're ready, join the official bot support server
+					and get in touch with one of the developers, who will guide you to add DisCog to your
+					server.
+				</div>
+				<div class="column block has-text-black">
+					Alternatively, you can create a server request on GitHub. This is a bit more complicated,
+					but it's a good option if you're a developer. When you're ready, create a new issue in the
+					official GitHub repository and follow instructions to create a server request.
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column">
+					<a href="/invite/support-server" class="button is-blurple is-medium">
+						<i class="fa-brands fa-discord mr-2"></i><strong>Get Started With Discord</strong>
+					</a>
+				</div>
+				<div class="column">
+					<a href="https://github.com/akpi816218/discog/discussions/new?category=server-requests"
+						class="button is-blurple is-medium">
+						<i class="fa-brands fa-github mr-2"></i><strong>Get Started With GitHub</strong>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- Invite Section End -->
+
+		<!-- Footer Section Start -->
+		<footer class="footer bg-base">
+			<div class="content has-text-centered has-text-white">
+				<div class="mb-2">
+					<a href="/invite/" class="has-text-white mr-2" target="_blank">
+						<i class="fa-brands fa-discord"></i>
+					</a>
+					<a href="https://github.com/akpi816218/discog" class="has-text-white ml-2" target="_blank">
+						<i class="fa-brands fa-github"></i>
+					</a>
+				</div>
+
+				<p>
+					<span class="has-text-weight-bold">DisCog</span>
+					<br />
+					&copy; <span id="cp-year">2023</span> Copyright
+					<a href="https://github.com/akpi816218">akpi816218</a>. All Rights Reserved.
+				</p>
+				<br /><br /><br />
+				<p style="letter-spacing: 0.1em; font-size: 0.75em" class="is-uppercase">
+					Website Designed By
+					<a href="https://jstnlt.my.id" class="blurple has-text-weight-bold" target="_blank">JstnLT</a>.<br />The
+					Original Website Design is Open Source on
+					<a href="https://github.com/JastinXyz/discord-bot-landing-page-web" class="blurple has-text-weight-bold"
+						target="_blank">Github</a>
+				</p>
+			</div>
+		</footer>
+		<!-- Footer Section End -->
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="https://unpkg.com/tippy.js@6"></script>
+		<script src="/assets/js/script.js"></script>
+	</body>
+
+</html>

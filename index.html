@@ -5,15 +5,15 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>DisCog</title>
-		<link rel="shortcut icon" href="assets/img/discog.png" type="image/png">
-		<link rel="stylesheet" href="assets/css/bulma.min.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="shortcut icon" href="/assets/img/discog.png" type="image/png" />
+		<link rel="stylesheet" href="/assets/css/bulma.min.css" />
+		<link rel="stylesheet" href="/assets/css/style.css" />
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
 			crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<script src="assets/js/jquery-3.6.0.js"></script>
+		<script src="/assets/js/jquery-3.6.0.js"></script>
 	</head>
 
 	<body>
@@ -24,11 +24,11 @@
 		<!-- Back To Top End -->
 
 		<!-- Navbar Start -->
-		<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+		<nav class="navbar is-fixed-top pl-2 pr-3" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand mt-2 mb-2">
-				<a class="navbar-item" href="#">
-					<strong style="margin-right:.5em;">DisCog</strong>
-					<img src="assets/img/discog.png" width="28" height="28" />
+				<a class="navbar-item" href="/#">
+					<img src="/assets/img/discog.png" width="28" height="28" />
+					<strong class="ml-3">DisCog</strong>
 				</a>
 
 				<a role="button" class="navbar-burger has-text-white" data-target="navMenu" aria-label="menu"
@@ -41,36 +41,23 @@
 
 			<div id="navbarBasicExample" class="navbar-menu">
 				<div class="navbar-start">
-					<a href="#" class="navbar-item is-tab">
-						Home
-					</a>
+					<a href="/" class="navbar-item is-tab">Home</a>
 
-					<a href="#features" class="navbar-item is-tab">
-						Features
-					</a>
+					<a href="/#features" class="navbar-item is-tab">Features</a>
 
-					<a href="#stats" class="navbar-item is-tab">
-						Stats
-					</a>
+					<a href="/#stats" class="navbar-item is-tab">Stats</a>
+
+					<a href="/invite/#" class="navbar-item is-tab">Invite</a>
 				</div>
 
 				<div class="navbar-end">
-					<a href="https://discord.com/invite/7A7QwXVpsJ" class="navbar-item is-tab" target="_blank">
+					<a href="/invite/support-server" class="navbar-item is-tab" target="_blank">
 						<i class="fa-brands fa-discord"></i>
 					</a>
 
 					<a href="https://github.com/akpi816218/discog" class="navbar-item is-tab" target="_blank">
 						<i class="fa-brands fa-github"></i>
 					</a>
-					<!-- Discord Login - for future? dashboard for identity or audit log? -->
-					<!-- <div class="navbar-item">
-						<div class="buttons">
-							<a href="#" class="button is-blurple">
-								<strong><i class="fa-solid fa-right-to-bracket mr-2"></i>
-									Login</strong>
-							</a>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</nav>
@@ -86,7 +73,8 @@
 								Time to add DisCog to your server!
 							</p>
 							<p class="subtitle has-text-grey-light is-size-6 mt-3">
-								DisCog is a free and open-source Discord bot made to simplify your Discord life.
+								DisCog is a free and open-source Discord bot made to simplify
+								your Discord life.
 							</p>
 							<div class="buttons">
 								<a href="#invite" class="button is-info">
@@ -99,8 +87,8 @@
 							</div>
 						</div>
 						<div class="column mt-6" data-aos="fade-left">
-							<img class="image has-image-centered vert-move mt-4" src="assets/img/discog.png" alt="logo image"
-								style="width: 20rem;" />
+							<img class="image has-image-centered vert-move mt-4" src="/assets/img/discog.png" alt="logo image"
+								style="width: 20rem" />
 						</div>
 					</div>
 				</div>
@@ -138,18 +126,24 @@
 
 				<div class="columns mt-6">
 					<div class="column mr-6">
-						<h4 class="title"><span class="blurple">Birthday</span> Greetings</h4>
+						<h4 class="title">
+							<span class="blurple">Birthday</span> Greetings
+						</h4>
 						<p class="subtitle mt-3">
-							With DisCog, forgetting someone's birthday is impossible. Every day at 12:00 AM PST, DisCog will send a
-							message wishing a happy birthday to anyone who has their birthday set in DisCog. The intelligent internal
-							algorithm first looks for any channel whose name contains "birthday" or "bday" and sends the message
-							there. If no such channel is found, DisCog will try to send the message in the server's System Channel. If
-							that does not exist either, it will choose the first channel it can send messages in. DisCog will never
-							sell your data. Only people with servers in common with you can see your birthday.
+							With DisCog, forgetting someone's birthday is impossible. Every
+							day at 12:00 AM PST, DisCog will send a message wishing a happy
+							birthday to anyone who has their birthday set in DisCog. The
+							intelligent internal algorithm first looks for any channel whose
+							name contains "birthday" or "bday" and sends the message there. If
+							no such channel is found, DisCog will try to send the message in
+							the server's System Channel. If that does not exist either, it
+							will choose the first channel it can send messages in. DisCog will
+							never sell your data. Only people with servers in common with you
+							can see your birthday.
 						</p>
 					</div>
 					<div class="column" data-aos="fade-left">
-						<img class="image has-image-centered" src="assets/img/cake.png" alt="feature1 img" style="width: 20rem;" />
+						<img class="image has-image-centered" src="/assets/img/cake.png" alt="feature1 img" style="width: 20rem" />
 					</div>
 				</div>
 			</div>
@@ -167,19 +161,20 @@
 
 				<div class="columns mt-6">
 					<div class="column" data-aos="fade-right">
-						<img class="image has-image-centered" src="assets/img/identity.svg" alt="feature1 img"
-							style="width: 20rem;" />
+						<img class="image has-image-centered" src="/assets/img/identity.svg" alt="feature1 img"
+							style="width: 20rem" />
 					</div>
 					<div class="column">
 						<h4 class="title">
 							User <span class="has-text-primary">Identity Profiles</span>
 						</h4>
 						<p class="subtitle mt-3">
-							DisCog features a unique Identity profile for each user. Members can set their preferred name, pronouns,
-							gender, and more. No more fighting to keep your Discord bio under the 190 character limit! DisCog allows
-							you up to 500 characters to express yourself thoroughly.
-							DisCog will never sell your data. Only people with servers in common with you can see your identity
-							profile.
+							DisCog features a unique Identity profile for each user. Members
+							can set their preferred name, pronouns, gender, and more. No more
+							fighting to keep your Discord bio under the 190 character limit!
+							DisCog allows you up to 500 characters to express yourself
+							thoroughly. DisCog will never sell your data. Only people with
+							servers in common with you can see your identity profile.
 						</p>
 					</div>
 				</div>
@@ -202,14 +197,16 @@
 							Helpful <span class="has-text-warning">Utility</span> Commands
 						</h4>
 						<p class="subtitle mt-3">
-							A lot of the commands in DisCog are utility commands. DisCog has commands to create announcements, polls,
-							and much more! Utilizing the functionality of message embeds, DisCog can create beautiful announcements
-							and polls that are easy to read and understand, simplifying the tasks of server moderators.
+							A lot of the commands in DisCog are utility commands. DisCog has
+							commands to create announcements, polls, and much more! Utilizing
+							the functionality of message embeds, DisCog can create beautiful
+							announcements and polls that are easy to read and understand,
+							simplifying the tasks of server moderators.
 						</p>
 					</div>
 					<div class="column" data-aos="fade-left">
-						<img class="image has-image-centered" src="assets/img/settings-sparkle.svg" alt="feature1 img"
-							style="width: 20rem;" />
+						<img class="image has-image-centered" src="/assets/img/settings-sparkle.svg" alt="feature1 img"
+							style="width: 20rem" />
 					</div>
 				</div>
 			</div>
@@ -227,15 +224,19 @@
 
 				<div class="columns mt-6">
 					<div class="column" data-aos="fade-right">
-						<img class="image has-image-centered" src="assets/img/product_literation.svg" alt="feature1 img"
-							style="width: 20rem;" />
+						<img class="image has-image-centered" src="/assets/img/product_literation.svg" alt="feature1 img"
+							style="width: 20rem" />
 					</div>
 					<div class="column">
-						<h4 class="title">Coming soon: <span class="has-text-info">Audit Logging</span></h4>
+						<h4 class="title">
+							Coming soon: <span class="has-text-info">Audit Logging</span>
+						</h4>
 						<p class="subtitle mt-3">
-							Discord by default stores audit log entries for 45 days. Server admins cannot see further into the past.
-							This in-development feature, when completed, will allow server admins to view all actions taken since the
-							beginning of time. DisCog will log and store all audit log events <em>permanently</em>.
+							Discord by default stores audit log entries for 45 days. Server
+							admins cannot see further into the past. This in-development
+							feature, when completed, will allow server admins to view all
+							actions taken since the beginning of time. DisCog will log and
+							store all audit log events <em>permanently</em>.
 						</p>
 					</div>
 				</div>
@@ -253,15 +254,14 @@
 
 			<div class="columns mt-6">
 				<div class="column has-text-centered">
-					<p class="title has-text-weight-bold lined" id="server-count">000</p>
+					<p class="title has-text-weight-bold lined" id="server-count">4</p>
 					<span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Servers</span>
 				</div>
 
 				<div class="column has-text-centered">
-					<p class="title has-text-weight-bold lined" id="command-count">000</p>
-					<span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commands<br><span
-							style="font-size:.8em;">(each
-							with numerous<br>subcommands and options)</span></span>
+					<p class="title has-text-weight-bold lined" id="command-count">15+</p>
+					<span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commands<br /><span
+							style="font-size: 0.8em">(each with numerous subcommands and options)</span></span>
 				</div>
 
 				<!-- <div class="column has-text-centered">
@@ -280,15 +280,16 @@
 						Ready to try <span class="blurple">DisCog</span>?
 					</p>
 					<p class="subtitle mt-3 has-text-gray">
-						Create a discussion on the GitHub repository, and the developers will help you get set up as soon as they
-						can!
+						Get in contact with the developers and get DisCog in your server
+						today!
+						<span class="has-text-grey is-size-6">(Don't worry, we don't bite ...unless you spam us.)</span>
+						We're always looking for new servers to have our bot in.
 					</p>
-					<a href="https://github.com/akpi816218/discog/discussions/new?category=server-requests"
-						class="button is-blurple is-medium"><strong>Get Started</strong></a>
+					<a href="/invite" class="button is-blurple is-medium"><strong>Get Started</strong></a>
 				</div>
 
 				<div class="column has-image-centered">
-					<img style="height:10em" src="assets/img/relaunch_day.svg">
+					<img style="height: 10em" src="/assets/img/relaunch_day.svg" />
 				</div>
 			</div>
 		</section>
@@ -298,11 +299,10 @@
 		<footer class="footer bg-base">
 			<div class="content has-text-centered has-text-white">
 				<div class="mb-2">
-					<a href="https://discord.com/invite/7A7QwXVpsJ" class="has-text-white" target="_blank">
+					<a href="/invite/" class="has-text-white mr-2" target="_blank">
 						<i class="fa-brands fa-discord"></i>
 					</a>
-					&nbsp; &nbsp;
-					<a href="https://github.com/akpi816218/discog" class="has-text-white" target="_blank">
+					<a href="https://github.com/akpi816218/discog" class="has-text-white ml-2" target="_blank">
 						<i class="fa-brands fa-github"></i>
 					</a>
 				</div>
@@ -310,16 +310,17 @@
 				<p>
 					<span class="has-text-weight-bold">DisCog</span>
 					<br />
-					&copy; <span id="cp-year">2023</span> Copyright <a href="https://github.com/akpi816218">akpi816218</a>. All
-					Rights
+					&copy; <span id="cp-year">2023</span> Copyright
+					<a href="https://github.com/akpi816218">akpi816218</a>. All Rights
 					Reserved.
 				</p>
-				<br><br><br>
-				<p style="letter-spacing: 0.1em; font-size: .75em;" class="is-uppercase">
+				<br /><br /><br />
+				<p style="letter-spacing: 0.1em; font-size: 0.75em" class="is-uppercase">
 					Website Designed By
-					<a href="https://jstnlt.my.id" class="blurple has-text-weight-bold" target="_blank">JstnLT</a>.<br>The
-					Original Website Design is Open Source on <a href="https://github.com/JastinXyz/discord-bot-landing-page-web"
-						class="blurple has-text-weight-bold" target="_blank">Github</a>
+					<a href="https://jstnlt.my.id" class="blurple has-text-weight-bold" target="_blank">JstnLT</a>.<br />The
+					Original Website Design is Open Source on
+					<a href="https://github.com/JastinXyz/discord-bot-landing-page-web" class="blurple has-text-weight-bold"
+						target="_blank">Github</a>
 				</p>
 			</div>
 		</footer>
@@ -328,8 +329,8 @@
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="https://unpkg.com/@popperjs/core@2"></script>
 		<script src="https://unpkg.com/tippy.js@6"></script>
-		<script src="assets/js/script.js"></script>
-		<script src="assets/js/count.js"></script>
+		<script src="/assets/js/script.js"></script>
+		<script src="/assets/js/count.js"></script>
 	</body>
 
 </html>
