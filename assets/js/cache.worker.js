@@ -11,9 +11,27 @@
 */
 self.addEventListener("install", (event) => {
 	event.waitUntil(
-		caches.open("discog.localplayer.dev").then((cache) => {
-			cache.add('https://discog.akpi816218.repl.co/api');
-
+		caches.open("discog.localplayer.dev").then(async (cache) => {
+		await cache.addAll([
+"/",
+"/invite",
+"/invite/support-server",
+"/assets/css/bulma.min.css",
+"/assets/css/style.css",
+"/assets/img/cake.png",
+"/assets/img/discog-banner.svg",
+"/assets/img/discog.png",
+"/assets/img/identity.svg",
+"/assets/img/made-with-bulma--dark.png",
+"/assets/img/product_literation.svg",
+"/assets/img/relaunch_day.svg",
+"/assets/img/settings-sparkle.svg",
+"/assets/js/cache.worker.js",
+"/assets/js/count.js",
+"/assets/js/jquery-3.6.0.js",
+"/assets/js/script.js"
+]);
+cache.add('https://discog.akpi816218.repl.co/api');
 		})
 	);
 });
