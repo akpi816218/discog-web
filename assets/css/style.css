@@ -247,6 +247,12 @@ nav.nav-w {
 .button.is-blurple {
 	background-color: var(--blurple);
 	border-color: transparent;
+	color: whitesmoke;
+}
+
+.button.is-dark-blurple {
+	background-color: var(--dark-blurple);
+	border-color: transparent;
 	color: white;
 }
 
