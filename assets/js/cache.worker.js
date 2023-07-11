@@ -14,7 +14,6 @@ self.addEventListener("install", (event) => {
 		caches.open("discog.localplayer.dev").then((cache) => {
 			cache.add('https://discog.akpi816218.repl.co/api');
 
-			]);
 		})
 	);
 });
