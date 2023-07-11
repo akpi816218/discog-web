@@ -13,9 +13,9 @@ self.addEventListener("install", (event) => {
 	event.waitUntil(
 		caches.open("discog.localplayer.dev").then(async (cache) => {
 		await cache.addAll([
-"/",
-"/invite",
-"/invite/support-server",
+"/index.html",
+"/invite/index.html",
+"/invite/support-server/index.html",
 "/assets/css/bulma.min.css",
 "/assets/css/style.css",
 "/assets/img/cake.png",
