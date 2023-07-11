@@ -246,7 +246,7 @@ nav.nav-w {
 
 .button:hover, .button:active, .button:focus {
 	transform: scale(1.125);
-	border-radius: 250%
+	border-radius: 200%
 }
 
 .button.is-blurple {
