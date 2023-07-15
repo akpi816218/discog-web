@@ -30,7 +30,7 @@ self.addEventListener("install", (event) => {
 "/assets/js/count.js",
 "/assets/js/jquery-3.6.0.js",
 "/assets/js/script.js",
-"https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js,
+"https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js",
 "https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js",
 "https://unpkg.com/aos@2.3.1/dist/aos.js",
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css",
