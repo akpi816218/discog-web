@@ -42,13 +42,6 @@ cache.add('https://discog.akpi816218.repl.co/api');
 });
 
 self.addEventListener("fetch", (event) => {
-	event.respondWith(
-		fetch(event.request).then((response) => {
-			return response;
-		}).catch(async (error) => {
-			return caches.match(event.request).then((cacheRes) => {
-				return cacheRes;
-			});
-		})
-	);
+	const res = await fetch(event.request).catch(async () => await caches.match(event.request));
+	event.respondWith(response);
 });
