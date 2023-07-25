@@ -8,7 +8,7 @@
 }
 
 * {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 html {
@@ -24,6 +24,10 @@ body {
 	width: 100vw;
 	margin: 0;
 	padding: 0;
+}
+
+.mono {
+	font-family: 'Ubuntu Mono', 'Source Code Pro', 'Roboto Mono', monospace;
 }
 
 .blurple {
@@ -244,7 +248,9 @@ nav.nav-w {
 	}
 }
 
-.button:hover, .button:active, .button:focus {
+.button:hover,
+.button:active,
+.button:focus {
 	transform: scale(1.125);
 }
 
