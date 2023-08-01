@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import RootLayout from '../layout';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import {
@@ -176,8 +175,6 @@ export default function InvitePage() {
 					</div>
 				</div>
 			</section>
-
-			<Footer />
 		</RootLayout>
 	);
 }

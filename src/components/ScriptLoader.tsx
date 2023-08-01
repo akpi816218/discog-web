@@ -11,7 +11,8 @@ export default function ScriptLoader() {
 				strategy="afterInteractive"
 				onReady={() => {
 					try {
-						// @ts-expect-error aos.js
+						// Init aos.js
+						// @ts-expect-error
 						AOS.init({
 							duration: 700,
 							once: true
@@ -20,7 +21,15 @@ export default function ScriptLoader() {
 					} catch {}
 				}}
 			/>
-			<Script src="/assets/js/script.js" />
+			<Script
+				src="/assets/js/script.js"
+				onReady={() => {
+					// clear loading screen
+					$('#loading').fadeOut(250, () =>
+						$('#loading').css('display', 'none')
+					);
+				}}
+			/>
 		</>
 	);
 }

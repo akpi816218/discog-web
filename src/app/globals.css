@@ -28,9 +28,25 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
+	color: white;
 }
 
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--bg);
+	z-index: 10000;
+	font-size: 2em;
+	color: white;
+	padding: 6em;
+}
+
+a,
 .link {
+	display: inline;
 	text-decoration: none;
 	color: var(--link-color);
 }
@@ -66,7 +82,10 @@ body {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
-	transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+	transition:
+		background-color 0.3s,
+		opacity 0.5s,
+		visibility 0.5s;
 	opacity: 0;
 	visibility: hidden;
 	z-index: 1000;
@@ -122,18 +141,22 @@ footer {
 		opacity: 0;
 		max-height: 0;
 	}
+
 	1% {
 		display: block;
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 		max-height: 396px;
 	}
+
 	from {
 		opacity: 0;
 		transform: translateY(-5px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -208,6 +231,54 @@ section#features {
 
 .mxh2m {
 	max-height: 2em;
+}
+
+.pt-12 {
+	padding-top: 6rem;
+}
+
+.pb-12 {
+	padding-bottom: 6rem;
+}
+
+.pl-12 {
+	padding-left: 6rem;
+}
+
+.pr-12 {
+	padding-right: 6rem;
+}
+
+.pt-6 {
+	padding-top: 3rem;
+}
+
+.pb-6 {
+	padding-bottom: 3rem;
+}
+
+.pl-6 {
+	padding-left: 3rem;
+}
+
+.pr-6 {
+	padding-right: 3rem;
+}
+
+.pt-0 {
+	padding-top: 0;
+}
+
+.pb-0 {
+	padding-bottom: 0;
+}
+
+.pl-0 {
+	padding-left: 0;
+}
+
+.pr-0 {
+	padding-right: 0;
 }
 
 .mb-12 {
@@ -316,38 +387,47 @@ section#features {
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(-10px);
 	}
 }
+
 @-webkit-keyframes mover {
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(-10px);
 	}
 }
+
 @-moz-keyframes mover {
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(-10px);
 	}
 }
+
 @-ms-keyframes mover {
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(-10px);
 	}
 }
+
 @-o-keyframes mover {
 	0% {
 		transform: translateY(0);
 	}
+
 	100% {
 		transform: translateY(-10px);
 	}

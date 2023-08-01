@@ -1,11 +1,11 @@
 import ScriptLoader from '@/components/ScriptLoader';
 import './aos@2.3.1.min.css';
-// import './tippy.js@6.3.7.css';
 import './bulma.min.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Script from 'next/script';
+import LoadingScreen from '@/components/LoadingScreen';
+import Footer from '@/components/Footer';
 
 const poppins = localFont({
 	src: [
@@ -127,9 +127,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body className={poppins.className}>
+		<html lang="en" suppressHydrationWarning={true}>
+			<body className={poppins.className} suppressHydrationWarning={true}>
+				<LoadingScreen />
 				{children}
+				<Footer />
 				<ScriptLoader />
 			</body>
 		</html>

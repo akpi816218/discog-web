@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import RootLayout from './layout';
 import Script from 'next/script';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
@@ -371,8 +370,6 @@ export default function HomePage() {
 					</div>
 				</div>
 			</section>
-
-			<Footer />
 
 			<Script src="/assets/js/count.js" strategy="lazyOnload" />
 		</RootLayout>

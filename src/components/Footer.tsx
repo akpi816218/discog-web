@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<footer className="bg-base">
+		<footer className="bg-base" suppressHydrationWarning={true}>
 			<div className="content has-text-centered has-text-white">
 				<div className="mb-2">
 					<Link
