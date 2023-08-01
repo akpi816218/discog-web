@@ -23,7 +23,7 @@ export default function ScriptLoader() {
 			/>
 			<Script
 				src="/assets/js/script.js"
-strategy="after interactive"
+				strategy="afterInteractive"
 				onReady={() => {
 					// clear loading screen
 					$('#loading').fadeOut(250, () =>
