@@ -129,7 +129,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning={true}>
 			<body className={poppins.className} suppressHydrationWarning={true}>
-				<LoadingScreen />
+				{/* <LoadingScreen /> */}
 				{children}
 				<Footer />
 				<ScriptLoader />
