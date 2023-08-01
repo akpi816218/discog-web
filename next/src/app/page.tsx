@@ -4,6 +4,7 @@ import RootLayout from './layout';
 import Script from 'next/script';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import {
 	config,
@@ -28,6 +29,42 @@ library.add(
 	faGithub as IconDefinition
 );
 
+export const metadata: Metadata = {
+	title: 'DisCog',
+	authors: { name: 'Akhil Pillai' },
+	keywords: [],
+	creator: 'Akhil Pillai',
+	generator: 'Next.js',
+	icons: ['/logo.png'],
+	description: 'The optimal bot for your Discord server',
+	twitter: {
+		card: 'summary_large_image',
+		site: '@discogbot',
+		creator: '@akpi816218',
+		images: 'https://discog.localplayer.dev/banner.svg',
+		description: 'The optimal bot for your Discord server'
+	},
+	openGraph: {
+		title: 'DisCog',
+		description: 'The optimal bot for your Discord server',
+		url: 'https://discog.localplayer.dev',
+		siteName: 'DisCog',
+		countryName: 'United States',
+		locale: 'en-US',
+		type: 'website',
+		images: [
+			{
+				url: 'https://discog.localplayer.dev/logo.png',
+				type: 'image/png'
+			},
+			{
+				url: 'https://discog.localplayer.dev/banner.svg',
+				type: 'image/svg+xml'
+			}
+		]
+	}
+};
+
 export default function HomePage() {
 	return (
 		<RootLayout>
@@ -38,14 +75,7 @@ export default function HomePage() {
 				<link rel="icon" href="/logo.png" type="image/png" />
 			</Head>
 
-			<Script src="/assets/js/jquery-3.6.0.js" />
-			<Script src="/assets/js/aos@2.3.1.js" />
-			<Script src="/assets/js/@popperjs_core@2.11.8.min.js" />
-			<Script src="/assets/js/tippy.js@6.3.7.min.js" />
-			<Script src="/assets/js/script.js" />
-			<Script src="/assets/js/count.js" strategy="lazyOnload" />
-
-			<Link id="backtotop" data-tippy-content="Back To Top." href="">
+			<Link id="backtotop" data-tippy-content="Back to Top" href="">
 				<FontAwesomeIcon
 					// @ts-expect-error
 					icon={faArrowUp}
@@ -56,7 +86,7 @@ export default function HomePage() {
 
 			<Nav selected="home" />
 
-			<section className="hero bg-base is-fullheight">
+			<section className="hero bg-base is-fullheight-with-navbar">
 				<div className="hero-body">
 					<div className="columns">
 						<div className="column mr-6 mt-12" data-aos="fade-up">
@@ -86,7 +116,7 @@ export default function HomePage() {
 					</div>
 				</div>
 				<div
-					className="block has-text-centered mb-6"
+					className="block has-text-centered"
 					data-tippy-content="Scroll Down"
 				>
 					<Link href="#features">
@@ -321,7 +351,11 @@ export default function HomePage() {
 							</span>{' '}
 							We&apos;re always looking for new servers to have our bot in.
 						</p>
-						<Link href="/invite" className="button is-dark-blurple is-medium">
+						<Link
+							href="/invite"
+							className="button is-dark-blurple is-medium"
+							prefetch={true}
+						>
 							<strong>Get Started</strong>
 						</Link>
 					</div>
@@ -339,6 +373,8 @@ export default function HomePage() {
 			</section>
 
 			<Footer />
+
+			<Script src="/assets/js/count.js" strategy="lazyOnload" />
 		</RootLayout>
 	);
 }

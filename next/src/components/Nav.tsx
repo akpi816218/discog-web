@@ -36,35 +36,35 @@ export default function Nav({
 
 			<div id="navbarBasicExample" className="navbar-menu">
 				<div className="navbar-start">
-					{selected === 'home' ? (
-						<Link href="/#" className="navbar-item is-tab is-active">
-							Home
-						</Link>
-					) : (
-						<Link href="/#" className="navbar-item is-tab">
-							Home
-						</Link>
-					)}
+					<Link
+						href="/#"
+						className={`navbar-item is-tab${
+							selected === 'home' ? ' is-active' : ''
+						}`}
+						prefetch={true}
+					>
+						Home
+					</Link>
 
-					{selected === 'invite' ? (
-						<Link href="/invite/#" className="navbar-item is-tab is-active">
-							Invite
-						</Link>
-					) : (
-						<Link href="/invite/#" className="navbar-item is-tab">
-							Invite
-						</Link>
-					)}
+					<Link
+						href="/invite/#"
+						className={`navbar-item is-tab${
+							selected === 'invite' ? ' is-active' : ''
+						}`}
+						prefetch={true}
+					>
+						Invite
+					</Link>
 
-					{selected === 'dev' ? (
-						<Link href="/dev/#" className="navbar-item is-tab is-active">
-							About the Dev
-						</Link>
-					) : (
-						<Link href="/dev/#" className="navbar-item is-tab">
-							About the Dev
-						</Link>
-					)}
+					<Link
+						href="/dev/#"
+						className={`navbar-item is-tab${
+							selected === 'dev' ? ' is-active' : ''
+						}`}
+						prefetch={true}
+					>
+						About the Dev
+					</Link>
 				</div>
 
 				<div className="navbar-end">
@@ -72,6 +72,7 @@ export default function Nav({
 						href="/invite/support-server"
 						className="navbar-item is-tab"
 						target="_blank"
+						prefetch={true}
 					>
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
 					</Link>
@@ -80,6 +81,7 @@ export default function Nav({
 						href="https://github.com/akpi816218/discog"
 						className="navbar-item is-tab"
 						target="_blank"
+						prefetch={true}
 					>
 						<FontAwesomeIcon icon={faGithub} size="xl" />
 					</Link>

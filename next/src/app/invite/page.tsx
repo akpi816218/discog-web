@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import RootLayout from '../layout';
-import Script from 'next/script';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
@@ -16,17 +15,10 @@ import {
 	faServer,
 	faTerminal
 } from '@fortawesome/fontawesome-free-solid';
-import {
-	faDev,
-	faDiscord,
-	faGithub,
-	faNpm,
-	faSpotify,
-	faSteam,
-	faYoutube
-} from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { Metadata } from 'next';
 
 config.autoAddCss = false;
 library.add(
@@ -35,6 +27,42 @@ library.add(
 	faDiscord as IconDefinition,
 	faGithub as IconDefinition
 );
+
+export const metadata: Metadata = {
+	title: 'DisCog | Invite',
+	authors: { name: 'Akhil Pillai' },
+	keywords: [],
+	creator: 'Akhil Pillai',
+	generator: 'Next.js',
+	icons: ['/logo.png'],
+	description: 'The optimal bot for your Discord server',
+	twitter: {
+		card: 'summary_large_image',
+		site: '@discogbot',
+		creator: '@akpi816218',
+		images: 'https://discog.localplayer.dev/banner.svg',
+		description: 'The optimal bot for your Discord server'
+	},
+	openGraph: {
+		title: 'DisCog | Invite',
+		description: 'The optimal bot for your Discord server',
+		url: 'https://discog.localplayer.dev',
+		siteName: 'DisCog',
+		countryName: 'United States',
+		locale: 'en-US',
+		type: 'website',
+		images: [
+			{
+				url: 'https://discog.localplayer.dev/logo.png',
+				type: 'image/png'
+			},
+			{
+				url: 'https://discog.localplayer.dev/banner.svg',
+				type: 'image/svg+xml'
+			}
+		]
+	}
+};
 
 export default function InvitePage() {
 	return (
@@ -46,13 +74,7 @@ export default function InvitePage() {
 				<link rel="icon" href="/logo.png" type="image/png" />
 			</Head>
 
-			<Script src="/assets/js/jquery-3.6.0.js" />
-			<Script src="/assets/js/aos@2.3.1.js" />
-			<Script src="/assets/js/@popperjs_core@2.11.8.min.js" />
-			<Script src="/assets/js/tippy.js@6.3.7.min.js" />
-			<Script src="/assets/js/script.js" />
-
-			<Link id="backtotop" data-tippy-content="Back To Top." href="">
+			<Link id="backtotop" data-tippy-content="Back to Top" href="">
 				<FontAwesomeIcon
 					// @ts-expect-error
 					icon={faArrowUp}

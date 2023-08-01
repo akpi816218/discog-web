@@ -1,9 +1,11 @@
-import './aos@2.3.1.css';
-import './tippy.js@6.3.7.css';
+import ScriptLoader from '@/components/ScriptLoader';
+import './aos@2.3.1.min.css';
+// import './tippy.js@6.3.7.css';
 import './bulma.min.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 
 const poppins = localFont({
 	src: [
@@ -84,12 +86,39 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
 	title: 'DisCog',
-	description: 'A Next.js website for DisCog',
 	authors: { name: 'Akhil Pillai' },
 	keywords: [],
 	creator: 'Akhil Pillai',
 	generator: 'Next.js',
-	icons: ['/logo.png']
+	icons: ['/logo.png'],
+	metadataBase: new URL('/', 'https://discog.localplayer.dev/'),
+	description: 'The optimal bot for your Discord server',
+	twitter: {
+		card: 'summary_large_image',
+		site: '@discogbot',
+		creator: '@akpi816218',
+		images: 'https://discog.localplayer.dev/banner.svg',
+		description: 'The optimal bot for your Discord server'
+	},
+	openGraph: {
+		title: 'DisCog',
+		description: 'The optimal bot for your Discord server',
+		url: 'https://discog.localplayer.dev',
+		siteName: 'DisCog',
+		countryName: 'United States',
+		locale: 'en-US',
+		type: 'website',
+		images: [
+			{
+				url: 'https://discog.localplayer.dev/logo.png',
+				type: 'image/png'
+			},
+			{
+				url: 'https://discog.localplayer.dev/banner.svg',
+				type: 'image/svg+xml'
+			}
+		]
+	}
 };
 
 export default function RootLayout({
@@ -99,7 +128,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={poppins.className}>{children}</body>
+			<body className={poppins.className}>
+				{children}
+				<ScriptLoader />
+			</body>
 		</html>
 	);
 }
