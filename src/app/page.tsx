@@ -53,12 +53,12 @@ export const metadata: Metadata = {
 		type: 'website',
 		images: [
 			{
-				url: 'https://discog.localplayer.dev/logo.png',
-				type: 'image/png'
-			},
-			{
 				url: 'https://discog.localplayer.dev/banner.svg',
 				type: 'image/svg+xml'
+			},
+			{
+				url: 'https://discog.localplayer.dev/logo.png',
+				type: 'image/png'
 			}
 		]
 	}
