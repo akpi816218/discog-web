@@ -59,7 +59,6 @@ export const metadata: Metadata = {
 				url: 'https://discog.localplayer.dev/logo.png',
 				type: 'image/png'
 			}
-			
 		]
 	}
 };
@@ -161,7 +160,6 @@ export default function InvitePage() {
 							href="/invite/support-server"
 							className="button is-blurple is-medium"
 						>
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDiscord} className="mr-2" />
 							<strong>Get Started With Discord</strong>
 						</a>
@@ -171,7 +169,6 @@ export default function InvitePage() {
 							href="https://github.com/akpi816218/discog/discussions/new?category=server-requests"
 							className="button is-dark-blurple is-medium"
 						>
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGithub} className="mr-2" />
 							<strong>Get Started With GitHub</strong>
 						</a>

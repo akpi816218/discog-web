@@ -38,8 +38,9 @@ export default function Nav({
 				<div className="navbar-start">
 					<Link
 						href="/#"
-						className={`navbar-item is-tab${selected === 'home' ? ' is-active' : ''
-							}`}
+						className={`navbar-item is-tab${
+							selected === 'home' ? ' is-active' : ''
+						}`}
 						prefetch={true}
 					>
 						Home
@@ -47,8 +48,9 @@ export default function Nav({
 
 					<Link
 						href="/invite/#"
-						className={`navbar-item is-tab${selected === 'invite' ? ' is-active' : ''
-							}`}
+						className={`navbar-item is-tab${
+							selected === 'invite' ? ' is-active' : ''
+						}`}
 						prefetch={true}
 					>
 						Invite
@@ -56,8 +58,9 @@ export default function Nav({
 
 					<Link
 						href="/dev/#"
-						className={`navbar-item is-tab${selected === 'dev' ? ' is-active' : ''
-							}`}
+						className={`navbar-item is-tab${
+							selected === 'dev' ? ' is-active' : ''
+						}`}
 						prefetch={true}
 					>
 						About the Dev
@@ -71,7 +74,6 @@ export default function Nav({
 						target="_blank"
 						prefetch={true}
 					>
-						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
 					</Link>
 
@@ -81,7 +83,6 @@ export default function Nav({
 						target="_blank"
 						prefetch={true}
 					>
-						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faGithub} size="xl" />
 					</Link>
 				</div>

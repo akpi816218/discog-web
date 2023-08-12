@@ -13,7 +13,6 @@ export default function Footer() {
 						className="has-text-white mr-2"
 						target="_blank"
 					>
-						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
 					</Link>
 					<Link
@@ -21,7 +20,6 @@ export default function Footer() {
 						className="has-text-white ml-2"
 						target="_blank"
 					>
-						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faGithub} size="xl" />
 					</Link>
 				</div>
