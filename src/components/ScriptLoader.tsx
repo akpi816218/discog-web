@@ -21,7 +21,16 @@ export default function ScriptLoader() {
 					} catch {}
 				}}
 			/>
-			<Script src="/assets/js/script.js" strategy="afterInteractive" />
+			<Script
+				src="/assets/js/script.js"
+				strategy="afterInteractive"
+				onReady={() => {
+					// clear loading screen
+					$('#loading').fadeOut(250, () =>
+						$('#loading').css('display', 'none')
+					);
+				}}
+			/>
 		</>
 	);
 }

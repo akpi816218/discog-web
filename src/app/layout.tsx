@@ -4,6 +4,7 @@ import './bulma.min.css';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import LoadingScreen from '@/components/LoadingScreen';
 import Footer from '@/components/Footer';
 
 const poppins = localFont({
@@ -128,6 +129,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning={true}>
 			<body className={poppins.className} suppressHydrationWarning={true}>
+				{/* <LoadingScreen /> */}
 				{children}
 				<Footer />
 				<ScriptLoader />
