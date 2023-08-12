@@ -83,7 +83,7 @@ export default function AboutTheDevPage() {
 
 			<Link id="backtotop" data-tippy-content="Back to Top" href="">
 				<FontAwesomeIcon
-					// @ts-expect-error
+					// @ts-ignore
 					icon={faArrowUp}
 					size="2xl"
 					className="has-text-white mt-05"
@@ -153,6 +153,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGithub} />
 						</span>
 						<span>GitHub</span>
@@ -163,6 +164,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDiscord} />
 						</span>
 						<span>Discord</span>
@@ -173,6 +175,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faNpm} />
 						</span>
 						<span>NPM</span>
@@ -183,6 +186,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDev} />
 						</span>
 						<span>DEV Community</span>
@@ -209,6 +213,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faSpotify} />
 						</span>
 						<span>Spotify</span>
@@ -219,6 +224,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faYoutube} />
 						</span>
 						<span>YouTube</span>
@@ -229,6 +235,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faSteam} />
 						</span>
 						<span>Steam</span>
