@@ -336,6 +336,18 @@ export default function HomePage() {
 				</div>
 			</section>
 
+			<section id="status" className="section mt-6">
+				<div className="has-text-centered">
+					<Link
+						href="/status"
+						className="button rounded2 is-blurple is-size-1 mb-4"
+					>
+						Status Page
+					</Link>
+					<div className="line line-center blurple" />
+				</div>
+			</section>
+
 			<section className="section mt-6" id="invite">
 				<div className="columns">
 					<div className="column has-text-left">

@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
 	--blurple: #5865f2;
@@ -448,6 +448,10 @@ section#features {
 	background-color: var(--dark-blurple);
 	border-color: transparent;
 	color: white;
+}
+
+.button.rounded2 {
+	border-radius: 2.5rem;
 }
 
 .single-feature {
