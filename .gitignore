@@ -10,8 +10,7 @@
 
 # next.js
 /.next/
-# need to include distDir for static export
-# /out/
+/out/
 
 # production
 /build
