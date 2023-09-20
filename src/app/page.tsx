@@ -6,7 +6,7 @@ import {
 	faTerminal
 } from '@fortawesome/fontawesome-free-solid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';

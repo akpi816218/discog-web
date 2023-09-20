@@ -13,7 +13,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
