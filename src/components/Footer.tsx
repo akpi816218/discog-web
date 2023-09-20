@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Footer() {
 	return (
-		<footer className="bg-base" suppressHydrationWarning={true}>
+		<footer className="bg-base">
 			<div className="content has-text-centered has-text-white">
 				<div className="mb-2">
 					<Link
@@ -13,7 +13,6 @@ export default function Footer() {
 						className="has-text-white mr-2"
 						target="_blank"
 					>
-						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
 					</Link>
 					<Link
@@ -21,7 +20,6 @@ export default function Footer() {
 						className="has-text-white ml-2"
 						target="_blank"
 					>
-						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faGithub} size="xl" />
 					</Link>
 				</div>
@@ -39,7 +37,6 @@ export default function Footer() {
 				>
 					<Image
 						src="/assets/img/made-with-bulma--dark.png"
-						// className="h2m"
 						alt="Made with Bulma"
 						className="is-inline"
 						width={256}

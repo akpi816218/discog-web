@@ -1,27 +1,43 @@
-import RootLayout from './layout';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
-import {
-	faArrowUp,
-	faServer,
-	faTerminal
-} from '@fortawesome/fontawesome-free-solid';
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import RootLayout from './layout';
 
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
+export const metadata: Metadata = {
+	title: 'DisCog | 404 Not Found',
+	authors: { name: 'Akhil Pillai' },
+	keywords: [],
+	creator: 'Akhil Pillai',
+	generator: 'Next.js',
+	icons: ['/logo.png'],
+	description: 'The optimal bot for your Discord server',
+	twitter: {
+		card: 'summary_large_image',
+		site: '@discogbot',
+		creator: '@akpi816218',
+		images: 'https://discog.localplayer.dev/banner.svg',
+		description: 'The optimal bot for your Discord server'
+	},
+	openGraph: {
+		title: 'DisCog',
+		description: 'The optimal bot for your Discord server',
+		url: 'https://discog.localplayer.dev',
+		siteName: 'DisCog',
+		countryName: 'United States',
+		locale: 'en-US',
+		type: 'website',
+		images: [
+			{
+				url: 'https://discog.localplayer.dev/logo.png',
+				type: 'image/png'
+			},
+			{
+				url: 'https://discog.localplayer.dev/banner.svg',
+				type: 'image/svg+xml'
+			}
+		]
+	}
+};
 
 export default function Err404Page() {
 	return (

@@ -1,31 +1,15 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import RootLayout from '../layout';
-import Link from 'next/link';
-import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
 import {
 	faArrowUp,
-	faChevronCircleDown,
-	faServer,
-	faTerminal
+	faChevronCircleDown
 } from '@fortawesome/fontawesome-free-solid';
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Metadata } from 'next';
-
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
+import Nav from '@/components/Nav';
+import RootLayout from '../layout';
 
 export const metadata: Metadata = {
 	title: 'DisCog | Invite',
@@ -160,7 +144,6 @@ export default function InvitePage() {
 							href="/invite/support-server"
 							className="button is-blurple is-medium"
 						>
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDiscord} className="mr-2" />
 							<strong>Get Started With Discord</strong>
 						</a>
@@ -170,7 +153,6 @@ export default function InvitePage() {
 							href="https://github.com/akpi816218/discog/discussions/new?category=server-requests"
 							className="button is-dark-blurple is-medium"
 						>
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGithub} className="mr-2" />
 							<strong>Get Started With GitHub</strong>
 						</a>

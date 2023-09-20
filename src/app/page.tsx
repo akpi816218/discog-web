@@ -1,32 +1,17 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import RootLayout from './layout';
-import Script from 'next/script';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import {
 	faArrowUp,
 	faChevronCircleDown,
 	faServer,
 	faTerminal
 } from '@fortawesome/fontawesome-free-solid';
-import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
+import Image from 'next/image';
+import Link from 'next/link';
+import { Metadata } from 'next';
+import Nav from '@/components/Nav';
+import RootLayout from './layout';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
 	title: 'DisCog',
@@ -67,13 +52,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
 	return (
 		<RootLayout>
-			<Head>
-				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<title>DisCog</title>
-				<link rel="icon" href="/logo.png" type="image/png" />
-			</Head>
-
 			<Link id="backtotop" data-tippy-content="Back to Top" href="">
 				<FontAwesomeIcon
 					// @ts-expect-error
@@ -115,19 +93,19 @@ export default function HomePage() {
 					</div>
 				</div>
 				<div
-					className="block has-text-centered"
-					data-tippy-content="Scroll Down"
+					className="is-block has-text-centered vm2-parent hover-cursor-pointer"
+					id='scroll-down-chevron'
 				>
-					<Link href="#features">
+					<div className="is-block vert-move2">
 						<FontAwesomeIcon
 							// @ts-ignore
 							icon={faChevronCircleDown}
 							size="2xl"
-							className="vert-move2 has-text-white"
+							className="has-text-white"
 						/>
-					</Link>
+					</div>
 				</div>
-			</section>
+			</section >
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
@@ -173,10 +151,10 @@ export default function HomePage() {
 								birthday.
 							</p>
 						</div>
-						<div className="column" data-aos="fade-left">
+						<div className="column" data-aos="fade-left" data-aos-delay="300">
 							<Image
 								className="image has-image-centered w20r"
-								src="/assets/img/cake.png"
+								src="/assets/img/ice_cream_cake-rafiki.svg"
 								width={1024}
 								height={1024}
 								alt="feature1 img"
@@ -197,10 +175,10 @@ export default function HomePage() {
 					</div>
 
 					<div className="columns mt-6">
-						<div className="column" data-aos="fade-right">
+						<div className="column" data-aos="fade-right" data-aos-delay="300">
 							<Image
 								className="image has-image-centered w20r"
-								src="/assets/img/identity.svg"
+								src="/assets/img/id_card-rafiki.svg"
 								width={800}
 								height={800}
 								alt="feature1 img"
@@ -248,7 +226,7 @@ export default function HomePage() {
 								understand, simplifying the tasks of server moderators.
 							</p>
 						</div>
-						<div className="column" data-aos="fade-left">
+						<div className="column" data-aos="fade-left" data-aos-delay="300">
 							<Image
 								className="image has-image-centered w20r"
 								src="/assets/img/settings-sparkle.svg"
@@ -272,10 +250,10 @@ export default function HomePage() {
 					</div>
 
 					<div className="columns mt-6">
-						<div className="column" data-aos="fade-right">
+						<div className="column" data-aos="fade-right" data-aos-delay="300">
 							<Image
 								className="image has-image-centered w20r"
-								src="/assets/img/product_literation.svg"
+								src="/assets/img/data_extraction-rafiki.svg"
 								width={741}
 								height={608}
 								alt="feature1 img"
@@ -314,7 +292,8 @@ export default function HomePage() {
 							not enough
 						</p>
 						<span className="subtitle has-text-weight-bold blurple">
-							<FontAwesomeIcon icon="server" size="xs" /> Servers
+							{/* @ts-expect-error */}
+							<FontAwesomeIcon icon={faServer} size="xs" /> Servers
 						</span>
 					</div>
 
@@ -326,7 +305,8 @@ export default function HomePage() {
 							15+
 						</p>
 						<span className="subtitle has-text-weight-bold blurple">
-							<FontAwesomeIcon icon="terminal" /> Commands
+							{/* @ts-expect-error */}
+							<FontAwesomeIcon icon={faTerminal} /> Commands
 							<br />
 							<span className="fs08m">
 								(each with numerous subcommands and options)
@@ -384,6 +364,6 @@ export default function HomePage() {
 			</section>
 
 			<Script src="/assets/js/count.js" strategy="lazyOnload" />
-		</RootLayout>
+		</RootLayout >
 	);
 }

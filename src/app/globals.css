@@ -50,8 +50,10 @@ a,
 	color: var(--link-color);
 }
 
-.link:hover {
+.link:hover,
+.hover-cursor-pointer:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .mono {
@@ -382,60 +384,127 @@ section#features {
 	animation: mover 0.5s infinite alternate;
 }
 
+.vm2-parent {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.vm2-parent:hover>.vert-move2 {
+	-webkit-animation: mover 0.25s infinite alternate;
+	-moz-animation: mover 0.25s infinite alternate;
+	-ms-animation: mover 0.25s infinite alternate;
+	-o-animation: mover 0.25s infinite alternate;
+	animation: mover 0.25s infinite alternate;
+}
+
 @keyframes mover {
 	0% {
-		transform: translateY(0);
+		transform: translateY(5px);
 	}
 
 	100% {
-		transform: translateY(-10px);
+		transform: translateY(-5px);
 	}
 }
 
 @-webkit-keyframes mover {
 	0% {
-		transform: translateY(0);
+		transform: translateY(5px);
 	}
 
 	100% {
-		transform: translateY(-10px);
+		transform: translateY(-5px);
 	}
 }
 
 @-moz-keyframes mover {
 	0% {
-		transform: translateY(0);
+		transform: translateY(5px);
 	}
 
 	100% {
-		transform: translateY(-10px);
+		transform: translateY(-5px);
 	}
 }
 
 @-ms-keyframes mover {
 	0% {
-		transform: translateY(0);
+		transform: translateY(5px);
 	}
 
 	100% {
-		transform: translateY(-10px);
+		transform: translateY(-5px);
 	}
 }
 
 @-o-keyframes mover {
 	0% {
-		transform: translateY(0);
+		transform: translateY(5px);
 	}
 
 	100% {
-		transform: translateY(-10px);
+		transform: translateY(-5px);
+	}
+}
+
+@keyframes button-pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.0625);
+	}
+}
+
+@-webkit-keyframes button-pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.0625);
+	}
+}
+
+@-moz-keyframes button-pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.0625);
+	}
+}
+
+@-ms-keyframes button-pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.0625);
+	}
+}
+
+@-o-keyframes button-pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.0625);
 	}
 }
 
 .button:hover,
 .button:active,
 .button:focus {
-	transform: scale(1.125);
+	animation: button-pulse 1s infinite alternate;
+	-webkit-animation: button-pulse 1s infinite alternate;
+	-moz-animation: button-pulse 1s infinite alternate;
+	-ms-animation: button-pulse 1s infinite alternate;
+	-o-animation: button-pulse 1s infinite alternate;
 }
 
 .button.is-blurple {

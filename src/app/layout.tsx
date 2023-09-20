@@ -1,11 +1,11 @@
-import ScriptLoader from '@/components/ScriptLoader';
 import './aos@2.3.1.min.css';
 import './bulma.min.css';
 import './globals.css';
-import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import LoadingScreen from '@/components/LoadingScreen';
 import Footer from '@/components/Footer';
+// import LoadingScreen from '@/components/LoadingScreen';
+import type { Metadata } from 'next';
+import ScriptLoader from '@/components/ScriptLoader';
+import localFont from 'next/font/local';
 
 const poppins = localFont({
 	src: [
@@ -127,8 +127,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning={true}>
-			<body className={poppins.className} suppressHydrationWarning={true}>
+		<html lang="en-US">
+			<body className={poppins.className}>
 				{/* <LoadingScreen /> */}
 				{children}
 				<Footer />

@@ -1,3 +1,5 @@
+$(window).scrollTop(0);
+
 // navbar burger
 document.addEventListener('DOMContentLoaded', () => {
 	const $navbarBurgers = Array.prototype.slice.call(
@@ -17,16 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 });
 
-$(document).ready(function () {
-	$('.navbar-burger').click(function () {
+$(document).on('ready', () => {
+	$('.navbar-burger').on('click', () => {
 		$('.navbar-burger').toggleClass('is-active');
 		$('.navbar-menu').toggleClass('is-active');
 	});
 });
 
 // navbar on scroll
-$(function () {
-	$(window).on('scroll', function () {
+$(() => {
+	$(window).on('scroll', () => {
 		if ($(window).scrollTop() > 700) {
 			$('nav').addClass('nav-w');
 			$('.navbar-menu').addClass('nav-w');
@@ -45,20 +47,25 @@ $(function () {
 	});
 });
 
-// back to top
-var btn = $('#backtotop');
+// scroll down chevron
+$('#scroll-down-chevron').on('click', () => {
+	$(window).scrollTop($('#features').offset().top);
+});
 
-$(window).scroll(function () {
+// back to top
+const backToTop = $('#backtotop');
+
+$(window).on('scroll', () => {
 	if ($(window).scrollTop() > 100) {
-		btn.addClass('show');
+		backToTop.addClass('show');
 	} else {
-		btn.removeClass('show');
+		backToTop.removeClass('show');
 	}
 });
 
-btn.on('click', function (e) {
+btn.on('click', (e) => {
 	e.preventDefault();
-	$('html, body').animate({ scrollTop: 0 }, '300');
+	$(document).animate({ scrollTop: 0 }, '300');
 });
 
 // copyright year

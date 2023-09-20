@@ -1,18 +1,6 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import RootLayout from '../layout';
-import Link from 'next/link';
-import Nav from '@/components/Nav';
-import {
-	config,
-	library,
-	IconDefinition
-} from '@fortawesome/fontawesome-svg-core';
 import {
 	faArrowUp,
-	faChevronCircleDown,
-	faServer,
-	faTerminal
+	faChevronCircleDown
 } from '@fortawesome/fontawesome-free-solid';
 import {
 	faDev,
@@ -24,16 +12,12 @@ import {
 	faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Metadata } from 'next';
-
-config.autoAddCss = false;
-library.add(
-	faServer as IconDefinition,
-	faTerminal as IconDefinition,
-	faDiscord as IconDefinition,
-	faGithub as IconDefinition
-);
+import Nav from '@/components/Nav';
+import RootLayout from '../layout';
 
 export const metadata: Metadata = {
 	title: 'DisCog | About the Developer',
@@ -83,7 +67,7 @@ export default function AboutTheDevPage() {
 
 			<Link id="backtotop" data-tippy-content="Back to Top" href="">
 				<FontAwesomeIcon
-					// @ts-ignore
+					// @ts-expect-error
 					icon={faArrowUp}
 					size="2xl"
 					className="has-text-white mt-05"
@@ -153,7 +137,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGithub} />
 						</span>
 						<span>GitHub</span>
@@ -164,7 +147,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDiscord} />
 						</span>
 						<span>Discord</span>
@@ -175,7 +157,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faNpm} />
 						</span>
 						<span>NPM</span>
@@ -186,7 +167,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDev} />
 						</span>
 						<span>DEV Community</span>
@@ -213,7 +193,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faSpotify} />
 						</span>
 						<span>Spotify</span>
@@ -224,7 +203,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faYoutube} />
 						</span>
 						<span>YouTube</span>
@@ -235,7 +213,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faSteam} />
 						</span>
 						<span>Steam</span>

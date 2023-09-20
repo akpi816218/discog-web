@@ -1,44 +1,37 @@
 {
 	"dependencies": {
-		"@fortawesome/fontawesome": "^1.1.8",
 		"@fortawesome/fontawesome-free-solid": "^5.0.13",
 		"@fortawesome/free-brands-svg-icons": "^6.4.2",
-		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@types/node": "20.5.6",
-		"@types/react": "18.2.21",
-		"@types/react-dom": "18.2.7",
-		"autoprefixer": "10.4.15",
-		"eslint": "8.48.0",
-		"eslint-config-next": "13.4.19",
-		"next": "13.4.19",
-		"postcss": "8.4.28",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"tailwindcss": "3.3.3",
-		"typescript": "5.2.2"
+		"@fortawesome/react-fontawesome": "^0.2.0"
 	},
 	"name": "discog-web",
 	"private": true,
 	"scripts": {
-		"b": "next build",
-		"build": "next build",
 		"d": "next dev",
 		"dev": "next dev",
 		"f": "prettier -w .",
 		"format": "prettier -w .",
 		"l": "next lint",
 		"lint": "next lint",
-		"start": "serve out",
-		"s": "serve out",
 		"u": "ncu -u && npm i",
 		"update": "ncu -u && npm i"
 	},
 	"type": "module",
 	"version": "0.1.0",
 	"devDependencies": {
-		"@types/jquery": "^3.5.17",
-		"npm-check-updates": "^16.13.1",
-		"prettier": "^3.0.2",
-		"serve": "^14.2.1"
+		"@next/codemod": "^13.5.2",
+		"@types/jquery": "^3.5.19",
+		"@types/node": "20.6.3",
+		"@types/react": "18.2.22",
+		"@types/react-dom": "18.2.7",
+		"eslint": "8.49.0",
+		"eslint-config-next": "13.5.2",
+		"next": "13.5.2",
+		"npm-check-updates": "^16.14.4",
+		"prettier": "^3.0.3",
+		"react": "^18.2.0",
+		"react-dom": "18.2.0",
+		"serve": "^14.2.1",
+		"typescript": "5.2.2"
 	}
 }
