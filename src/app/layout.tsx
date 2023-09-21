@@ -1,4 +1,4 @@
-import './aos@2.3.1.min.css';
+import './aos@2.3.4.min.css';
 import './bulma.min.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import './globals.css';
@@ -48,9 +48,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en-US">
-			<body>
-				{children}
-			</body>
+			<body>{children}</body>
 		</html>
 	);
 }

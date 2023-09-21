@@ -1,6 +1,6 @@
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 export default function Nav({
@@ -37,21 +37,27 @@ export default function Nav({
 				<div className="navbar-start">
 					<Link
 						href="/#"
-						className={`navbar-item is-tab${selected === 'home' ? ' is-active' : ''}`}
+						className={`navbar-item is-tab${
+							selected === 'home' ? ' is-active' : ''
+						}`}
 					>
 						Home
 					</Link>
 
 					<Link
 						href="/invite/#"
-						className={`navbar-item is-tab${selected === 'invite' ? ' is-active' : ''}`}
+						className={`navbar-item is-tab${
+							selected === 'invite' ? ' is-active' : ''
+						}`}
 					>
 						Invite
 					</Link>
 
 					<Link
 						href="/dev/#"
-						className={`navbar-item is-tab${selected === 'dev' ? ' is-active' : ''}`}
+						className={`navbar-item is-tab${
+							selected === 'dev' ? ' is-active' : ''
+						}`}
 					>
 						About the Dev
 					</Link>

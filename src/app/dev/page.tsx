@@ -64,12 +64,22 @@ export default function AboutTheDevPage() {
 			<section className="hero bg-base is-fullheight pb-12">
 				<div className="hero-body">
 					<div className="columns">
-						<div className="column mr-6 mb-12" data-aos="fade-left" data-aos-delay='500' data-aos-duration='750'>
+						<div
+							className="column mr-6 mb-12"
+							data-aos="fade-left"
+							data-aos-delay="500"
+							data-aos-duration="750"
+						>
 							<h1 className="title has-text-white has-text-weight-bold has-text-centered is-size-1">
 								Meet the developer
 							</h1>
 						</div>
-						<div className="column mt-12" data-aos="fade-right" data-aos-delay='1500' data-aos-duration='2500'>
+						<div
+							className="column mt-12"
+							data-aos="fade-right"
+							data-aos-delay="1500"
+							data-aos-duration="2500"
+						>
 							<p className="title has-text-weight-light has-text-white">
 								Because the developer wants to meet you too.
 							</p>

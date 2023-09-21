@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/fontawesome-free-solid";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/fontawesome-free-solid';
 
 export default function BackToTop() {
 	return (
@@ -11,5 +11,5 @@ export default function BackToTop() {
 				className="has-text-white mt-05"
 			/>
 		</div>
-	)
+	);
 }

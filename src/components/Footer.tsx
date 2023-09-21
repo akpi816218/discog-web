@@ -1,6 +1,6 @@
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 export default function Footer({
@@ -47,11 +47,12 @@ export default function Footer({
 						height={48}
 					/>
 				</Link>
-				{storysetAttribution &&
-					<p className='mt-4'>
-						Certain illustrations by <Link href="https://storyset.com">Storyset</Link>.
+				{storysetAttribution && (
+					<p className="mt-4">
+						Certain illustrations by{' '}
+						<Link href="https://storyset.com">Storyset</Link>.
 					</p>
-				}
+				)}
 			</div>
 		</footer>
 	);

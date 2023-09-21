@@ -112,7 +112,7 @@ footer {
 	-o-transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
-	margin-bottom: calc(.5rem - 3px);
+	margin-bottom: calc(0.5rem - 3px);
 	padding-bottom: 0;
 	min-height: 1.25em !important;
 }
@@ -375,7 +375,7 @@ section#features {
 	padding-bottom: 5px;
 }
 
-.vm2-parent:hover>.vert-move2 {
+.vm2-parent:hover > .vert-move2 {
 	-webkit-animation: mover 0.25s infinite alternate;
 	-moz-animation: mover 0.25s infinite alternate;
 	-ms-animation: mover 0.25s infinite alternate;

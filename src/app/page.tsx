@@ -1,11 +1,8 @@
-import {
-	faServer,
-	faTerminal
-} from '@fortawesome/fontawesome-free-solid';
+import { faServer, faTerminal } from '@fortawesome/fontawesome-free-solid';
 import BackToTop from '@/components/BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '@/components/Footer';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
@@ -68,7 +65,10 @@ export default function HomePage() {
 								your Discord life.
 							</p>
 							<div className="buttons">
-								<Link href="#invite" className="button is-blurple has-text-weight-bold">
+								<Link
+									href="#invite"
+									className="button is-blurple has-text-weight-bold"
+								>
 									Add To Discord
 								</Link>
 							</div>
@@ -86,7 +86,7 @@ export default function HomePage() {
 					</div>
 				</div>
 				<ScrollDownChevron />
-			</section >
+			</section>
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
@@ -132,7 +132,11 @@ export default function HomePage() {
 								birthday.
 							</p>
 						</div>
-						<div className="column has-text-centered" data-aos="fade-left" data-aos-delay="300">
+						<div
+							className="column has-text-centered"
+							data-aos="fade-left"
+							data-aos-delay="300"
+						>
 							<Image
 								className="image w20r"
 								src="/assets/img/ice_cream_cake-rafiki.svg"
@@ -156,7 +160,11 @@ export default function HomePage() {
 					</div>
 
 					<div className="columns mt-6">
-						<div className="column has-text-centered" data-aos="fade-right" data-aos-delay="300">
+						<div
+							className="column has-text-centered"
+							data-aos="fade-right"
+							data-aos-delay="300"
+						>
 							<Image
 								className="image w20r"
 								src="/assets/img/id_card-rafiki.svg"
@@ -207,7 +215,11 @@ export default function HomePage() {
 								understand, simplifying the tasks of server moderators.
 							</p>
 						</div>
-						<div className="column has-text-centered" data-aos="fade-left" data-aos-delay="300">
+						<div
+							className="column has-text-centered"
+							data-aos="fade-left"
+							data-aos-delay="300"
+						>
 							<Image
 								className="image w20r"
 								src="/assets/img/settings-sparkle.svg"
@@ -231,7 +243,11 @@ export default function HomePage() {
 					</div>
 
 					<div className="columns mt-6">
-						<div className="column has-text-centered" data-aos="fade-right" data-aos-delay="300">
+						<div
+							className="column has-text-centered"
+							data-aos="fade-right"
+							data-aos-delay="300"
+						>
 							<Image
 								className="image w20r"
 								src="/assets/img/data_extraction-rafiki.svg"
@@ -302,7 +318,7 @@ export default function HomePage() {
 					<div className="line line-center blurple" />
 					<Link
 						href="/status"
-						target='_blank'
+						target="_blank"
 						className="button rounded2 is-blurple is-size-1 mt-4 mb-4"
 					>
 						Status Page

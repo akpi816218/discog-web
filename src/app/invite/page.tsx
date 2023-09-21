@@ -54,7 +54,11 @@ export default function InvitePage() {
 				<div className="hero-head"></div>
 				<div className="hero-body">
 					<div className="mt-6 columns">
-						<div className="column has-text-centered" data-aos="fade-right" data-aos-delay='500'>
+						<div
+							className="column has-text-centered"
+							data-aos="fade-right"
+							data-aos-delay="500"
+						>
 							{/* eslint-disable-next-line @next/next/no-img-element */}
 							<img
 								className="image vert-move2"
@@ -64,9 +68,14 @@ export default function InvitePage() {
 								alt="logo image"
 							/>
 						</div>
-						<div className="column has-text-right mt-12" data-aos="fade-down" data-aos-delay='500'>
+						<div
+							className="column has-text-right mt-12"
+							data-aos="fade-down"
+							data-aos-delay="500"
+						>
 							<h1 className="is-size-1 has-text-weight-bold has-text-white has-text-right">
-								Get your server ready for <span className="blurple">DisCog</span>!
+								Get your server ready for{' '}
+								<span className="blurple">DisCog</span>!
 							</h1>
 						</div>
 					</div>

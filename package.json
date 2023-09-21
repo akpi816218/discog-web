@@ -8,8 +8,10 @@
 	"name": "discog-web",
 	"private": true,
 	"scripts": {
-		"d": "next dev",
-		"dev": "next dev",
+		"b": "npm run bundle",
+		"bundle": "cat ./public/assets/js/jquery-3.7.1.min.js ./public/assets/js/aos@2.3.4.min.js ./public/assets/js/main.js > ./public/assets/js/dist-bundle.min.js",
+		"d": "npm run b && next dev",
+		"dev": "npm run b && next dev",
 		"f": "prettier -w .",
 		"format": "prettier -w .",
 		"l": "next lint",
@@ -34,6 +36,7 @@
 		"react": "^18.2.0",
 		"react-dom": "18.2.0",
 		"serve": "^14.2.1",
-		"typescript": "5.2.2"
+		"typescript": "5.2.2",
+		"uglify-js": "^3.17.4"
 	}
 }
