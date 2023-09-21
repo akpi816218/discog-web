@@ -64,13 +64,12 @@ export default function HomePage() {
 								DisCog is a free and open-source Discord bot made to simplify
 								your Discord life.
 							</p>
-							<div className="buttons">
-								<Link
-									href="#invite"
+							<div className="buttons" id='button-scroll-to-invite'>
+								<div
 									className="button is-blurple has-text-weight-bold"
 								>
 									Add To Discord
-								</Link>
+								</div>
 							</div>
 						</div>
 						<div className="column has-text-centered" data-aos="fade-left">

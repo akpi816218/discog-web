@@ -375,7 +375,7 @@ section#features {
 	padding-bottom: 5px;
 }
 
-.vm2-parent:hover > .vert-move2 {
+.vm2-parent:hover>.vert-move2 {
 	-webkit-animation: mover 0.25s infinite alternate;
 	-moz-animation: mover 0.25s infinite alternate;
 	-ms-animation: mover 0.25s infinite alternate;
@@ -488,11 +488,12 @@ section#features {
 .button:focus {
 	border: none;
 	box-shadow: none;
-	animation: button-pulse 1s infinite alternate;
-	-webkit-animation: button-pulse 1s infinite alternate;
-	-moz-animation: button-pulse 1s infinite alternate;
-	-ms-animation: button-pulse 1s infinite alternate;
-	-o-animation: button-pulse 1s infinite alternate;
+	--duration: .625s;
+	animation: button-pulse var(--duration) infinite alternate;
+	-webkit-animation: button-pulse var(--duration) infinite alternate;
+	-moz-animation: button-pulse var(--duration) infinite alternate;
+	-ms-animation: button-pulse var(--duration) infinite alternate;
+	-o-animation: button-pulse var(--duration) infinite alternate;
 }
 
 .button.is-blurple {
