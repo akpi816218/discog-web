@@ -1,15 +1,11 @@
-import {
-	faArrowUp,
-	faChevronCircleDown
-} from '@fortawesome/fontawesome-free-solid';
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
+import BackToTop from '@/components/BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Head from 'next/head';
-import Image from "next/legacy/image";
-import Link from 'next/link';
+import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import RootLayout from '../layout';
+import ScriptLoader from '@/components/ScriptLoader';
+import ScrollDownChevron from '@/components/ScrollDownChevron';
 
 export const metadata: Metadata = {
 	title: 'DisCog | Invite',
@@ -49,60 +45,33 @@ export const metadata: Metadata = {
 
 export default function InvitePage() {
 	return (
-		<RootLayout>
-			<Head>
-				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<title>DisCog</title>
-				<link rel="icon" href="/logo.png" type="image/png" />
-			</Head>
-
-			<Link id="backtotop" data-tippy-content="Back to Top" href="">
-				<FontAwesomeIcon
-					// @ts-expect-error
-					icon={faArrowUp}
-					size="2xl"
-					className="has-text-white mt-05"
-				/>
-			</Link>
+		<>
+			<BackToTop />
 
 			<Nav selected="invite" />
 
-			<section className="hero bg-base is-fullheight">
+			<section className="hero bg-base is-fullheight pb-6">
 				<div className="hero-head"></div>
 				<div className="hero-body">
 					<div className="mt-6 columns">
-						<div className="column has-image-centered" data-aos="fade-right">
-							<Image
-								className="image vert-move mt-4 has-image-centered w20r"
+						<div className="column has-text-centered" data-aos="fade-right" data-aos-delay='500'>
+							{/* eslint-disable-next-line @next/next/no-img-element */}
+							<img
+								className="image vert-move2"
 								src="/assets/img/discog.png"
-								priority={true}
 								width={409}
 								height={409}
 								alt="logo image"
 							/>
 						</div>
-						<div className="column has-text-right mt-12" data-aos="fade-down">
+						<div className="column has-text-right mt-12" data-aos="fade-down" data-aos-delay='500'>
 							<h1 className="is-size-1 has-text-weight-bold has-text-white has-text-right">
-								Get your server ready for{' '}
-								<strong className="blurple">DisCog</strong>!
+								Get your server ready for <span className="blurple">DisCog</span>!
 							</h1>
 						</div>
 					</div>
 				</div>
-				<div
-					className="has-text-centered hero-foot"
-					data-tippy-content="Scroll Down"
-				>
-					<Link href="#invite">
-						<FontAwesomeIcon
-							// @ts-expect-error
-							icon={faChevronCircleDown}
-							size="2xl"
-							className="vert-move2 mb-6 has-text-white"
-						/>
-					</Link>
-				</div>
+				<ScrollDownChevron />
 			</section>
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -159,6 +128,8 @@ export default function InvitePage() {
 					</div>
 				</div>
 			</section>
-		</RootLayout>
+			<Footer />
+			<ScriptLoader />
+		</>
 	);
 }

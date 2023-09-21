@@ -3,7 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from "next/legacy/image";
 import Link from 'next/link';
 
-export default function Footer() {
+export default function Footer({
+	storysetAttribution = false
+}: {
+	storysetAttribution?: boolean;
+}) {
 	return (
 		<footer className="bg-base">
 			<div className="content has-text-centered has-text-white">
@@ -43,6 +47,11 @@ export default function Footer() {
 						height={48}
 					/>
 				</Link>
+				{storysetAttribution &&
+					<p className='mt-4'>
+						Certain illustrations by <Link href="https://storyset.com">Storyset</Link>.
+					</p>
+				}
 			</div>
 		</footer>
 	);

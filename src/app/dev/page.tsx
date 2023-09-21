@@ -1,8 +1,4 @@
 import {
-	faArrowUp,
-	faChevronCircleDown
-} from '@fortawesome/fontawesome-free-solid';
-import {
 	faDev,
 	faDiscord,
 	faGithub,
@@ -11,13 +7,16 @@ import {
 	faSteam,
 	faYoutube
 } from '@fortawesome/free-brands-svg-icons';
+import BackToTop from '@/components/BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Head from 'next/head';
-import Image from "next/legacy/image";
+import Footer from '@/components/Footer';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import RootLayout from '../layout';
+import ScriptLoader from '@/components/ScriptLoader';
+import ScrollDownChevron from '@/components/ScrollDownChevron';
+import { faGlobe } from '@fortawesome/fontawesome-free-solid';
 
 export const metadata: Metadata = {
 	title: 'DisCog | About the Developer',
@@ -57,50 +56,27 @@ export const metadata: Metadata = {
 
 export default function AboutTheDevPage() {
 	return (
-		<RootLayout>
-			<Head>
-				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<title>DisCog</title>
-				<link rel="icon" href="/logo.png" type="image/png" />
-			</Head>
-
-			<Link id="backtotop" data-tippy-content="Back to Top" href="">
-				<FontAwesomeIcon
-					// @ts-expect-error
-					icon={faArrowUp}
-					size="2xl"
-					className="has-text-white mt-05"
-				/>
-			</Link>
+		<>
+			<BackToTop />
 
 			<Nav selected="dev" />
 
-			<section className="hero bg-base is-fullheight">
+			<section className="hero bg-base is-fullheight pb-12">
 				<div className="hero-body">
 					<div className="columns">
-						<div className="column mr-6 mb-12" data-aos="fade-left">
+						<div className="column mr-6 mb-12" data-aos="fade-left" data-aos-delay='500' data-aos-duration='750'>
 							<h1 className="title has-text-white has-text-weight-bold has-text-centered is-size-1">
 								Meet the developer
 							</h1>
 						</div>
-						<div className="column mt-12" data-aos="fade-right">
+						<div className="column mt-12" data-aos="fade-right" data-aos-delay='1500' data-aos-duration='2500'>
 							<p className="title has-text-weight-light has-text-white">
 								Because the developer wants to meet you too.
 							</p>
 						</div>
 					</div>
 				</div>
-				<div className="has-text-centered" data-tippy-content="Scroll Down">
-					<Link href="#akpi816218">
-						<FontAwesomeIcon
-							// @ts-expect-error
-							icon={faChevronCircleDown}
-							size="2xl"
-							className="vert-move2 mb-6 has-text-white"
-						/>
-					</Link>
-				</div>
+				<ScrollDownChevron />
 			</section>
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -131,6 +107,17 @@ export default function AboutTheDevPage() {
 					biology, computer science, music, and Spanish.
 				</p>
 				<div>
+					<Link
+						href="https://akpi.is-a.dev"
+						className="button is-rounded is-medium is-blurple m-1"
+						target="_blank"
+					>
+						<span className="icon">
+							{/* @ts-expect-error */}
+							<FontAwesomeIcon icon={faGlobe} />
+						</span>
+						<span>Website</span>
+					</Link>
 					<Link
 						href="https://github.com/akpi816218"
 						className="button is-rounded is-medium is-blurple m-1"
@@ -220,13 +207,6 @@ export default function AboutTheDevPage() {
 				</div>
 				<div>
 					<Link
-						href="https://discog.localplayer.dev"
-						className="button is-rounded is-medium is-dark-blurple m-1"
-						target="_blank"
-					>
-						DisCog
-					</Link>
-					<Link
 						href="https://pronouns.js.org"
 						className="button is-rounded is-medium is-dark-blurple m-1"
 						target="_blank"
@@ -249,6 +229,8 @@ export default function AboutTheDevPage() {
 					</Link>
 				</div>
 			</section>
-		</RootLayout>
+			<Footer />
+			<ScriptLoader />
+		</>
 	);
 }

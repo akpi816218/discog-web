@@ -2,32 +2,24 @@
 @tailwind components;
 @tailwind utilities; */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
 	--blurple: #5865f2;
 	--dark-blurple: #454fbf;
 	--bg: #23272a;
 	--line-bg: #00d1b2;
 	--link-color: #00d1b2;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
 }
 
 * {
 	font-family: inherit;
-}
-
-html {
-	scroll-behavior: smooth;
-	overflow-x: hidden;
-	margin: 0;
-	padding: 0;
-	width: 100vw;
-}
-
-body {
-	overflow-x: hidden;
-	width: 100vw;
-	margin: 0;
-	padding: 0;
-	font-family: 'Poppins', sans-serif;
 }
 
 #loading {
@@ -62,7 +54,7 @@ a,
 }
 
 .blurple {
-	color: var(--blurple);
+	color: var(--blurple) !important;
 }
 
 .dark-blurple {
@@ -107,7 +99,7 @@ a,
 }
 
 footer {
-	padding: 3rem 1.5rem 5rem;
+	padding: 4rem;
 }
 
 .navbar-brand {
@@ -120,6 +112,9 @@ footer {
 	-o-transition: all 0.2s ease-in;
 	-webkit-transition: all 0.2s ease-in;
 	transition: all 0.2s ease-in;
+	margin-bottom: calc(.5rem - 3px);
+	padding-bottom: 0;
+	min-height: 1.25em !important;
 }
 
 .navbar-item:hover {
@@ -200,10 +195,6 @@ section#features {
 
 .hauto {
 	height: auto;
-}
-
-.w20r {
-	width: 20rem;
 }
 
 .fs08m {
@@ -308,11 +299,6 @@ section#features {
 
 .img-col-mr-13 {
 	margin-right: 13rem;
-}
-
-.has-image-centered {
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .line {
@@ -500,6 +486,8 @@ section#features {
 .button:hover,
 .button:active,
 .button:focus {
+	border: none;
+	box-shadow: none;
 	animation: button-pulse 1s infinite alternate;
 	-webkit-animation: button-pulse 1s infinite alternate;
 	-moz-animation: button-pulse 1s infinite alternate;

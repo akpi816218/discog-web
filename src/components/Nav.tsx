@@ -20,8 +20,7 @@ export default function Nav({
 					<strong className="ml-3">DisCog</strong>
 				</Link>
 
-				<Link
-					href=""
+				<div
 					role="button"
 					className="navbar-burger has-text-white"
 					data-target="navMenu"
@@ -31,37 +30,28 @@ export default function Nav({
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
-				</Link>
+				</div>
 			</div>
 
 			<div id="navbarBasicExample" className="navbar-menu">
 				<div className="navbar-start">
 					<Link
 						href="/#"
-						className={`navbar-item is-tab${
-							selected === 'home' ? ' is-active' : ''
-						}`}
-						prefetch={true}
+						className={`navbar-item is-tab${selected === 'home' ? ' is-active' : ''}`}
 					>
 						Home
 					</Link>
 
 					<Link
 						href="/invite/#"
-						className={`navbar-item is-tab${
-							selected === 'invite' ? ' is-active' : ''
-						}`}
-						prefetch={true}
+						className={`navbar-item is-tab${selected === 'invite' ? ' is-active' : ''}`}
 					>
 						Invite
 					</Link>
 
 					<Link
 						href="/dev/#"
-						className={`navbar-item is-tab${
-							selected === 'dev' ? ' is-active' : ''
-						}`}
-						prefetch={true}
+						className={`navbar-item is-tab${selected === 'dev' ? ' is-active' : ''}`}
 					>
 						About the Dev
 					</Link>
@@ -72,7 +62,6 @@ export default function Nav({
 						href="/invite/support-server"
 						className="navbar-item is-tab"
 						target="_blank"
-						prefetch={true}
 					>
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
 					</Link>
@@ -81,7 +70,6 @@ export default function Nav({
 						href="https://github.com/akpi816218/discog"
 						className="navbar-item is-tab"
 						target="_blank"
-						prefetch={true}
 					>
 						<FontAwesomeIcon icon={faGithub} size="xl" />
 					</Link>

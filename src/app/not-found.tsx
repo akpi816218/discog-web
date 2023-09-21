@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
@@ -96,6 +97,7 @@ export default function Err404Page() {
 					</div>
 				</div>
 			</section>
+			<Footer />
 		</RootLayout>
 	);
 }

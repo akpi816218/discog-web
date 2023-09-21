@@ -1,88 +1,8 @@
 import './aos@2.3.1.min.css';
 import './bulma.min.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import './globals.css';
-import Footer from '@/components/Footer';
-// import LoadingScreen from '@/components/LoadingScreen';
 import type { Metadata } from 'next';
-import ScriptLoader from '@/components/ScriptLoader';
-import localFont from 'next/font/local';
-
-const poppins = localFont({
-	src: [
-		{
-			path: '../../public/assets/fonts/Poppins-ExtraLight.ttf',
-			style: 'normal',
-			weight: '200'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-ExtraLightItalic.ttf',
-			style: 'italic',
-			weight: '200'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-Light.ttf',
-			style: 'normal',
-			weight: '300'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-LightItalic.ttf',
-			style: 'italic',
-			weight: '300'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-Regular.ttf',
-			style: 'normal',
-			weight: '400'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-Italic.ttf',
-			style: 'italic',
-			weight: '400'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-Medium.ttf',
-			style: 'normal',
-			weight: '500'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-MediumItalic.ttf',
-			style: 'italic',
-			weight: '500'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-SemiBold.ttf',
-			style: 'normal',
-			weight: '600'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-SemiBoldItalic.ttf',
-			style: 'italic',
-			weight: '600'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-Bold.ttf',
-			style: 'normal',
-			weight: '700'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-BoldItalic.ttf',
-			style: 'italic',
-			weight: '700'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-ExtraBold.ttf',
-			style: 'normal',
-			weight: '800'
-		},
-		{
-			path: '../../public/assets/fonts/Poppins-ExtraBoldItalic.ttf',
-			style: 'italic',
-			weight: '800'
-		}
-	],
-	variable: '--font-poppins',
-	preload: true
-});
 
 export const metadata: Metadata = {
 	title: 'DisCog',
@@ -128,11 +48,8 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en-US">
-			<body className={poppins.className}>
-				{/* <LoadingScreen /> */}
+			<body>
 				{children}
-				<Footer />
-				<ScriptLoader />
 			</body>
 		</html>
 	);

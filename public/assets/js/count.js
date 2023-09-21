@@ -11,5 +11,4 @@ fetch('https://corsproxy.io/?https%3A%2F%2Fdiscog.akpi816218.repl.co%2Fapi', {
 		document.getElementById('command-count').innerText =
 			data.commandCount ?? '20';
 		// document.getElementById('user-count').innerText = data.userCount;
-	})
-	.catch((err) => console.error(err));
+	});
