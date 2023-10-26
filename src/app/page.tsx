@@ -9,6 +9,8 @@ import Nav from '@/components/Nav';
 import Script from 'next/script';
 import ScriptLoader from '@/components/ScriptLoader';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
+import Code from '@/components/Code';
+import Counter from '@/components/Counter';
 
 export const metadata: Metadata = {
 	title: 'DisCog',
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		site: '@discogbot',
 		creator: '@akpi816218',
-		images: 'https://discog.localplayer.dev/banner.svg',
+		images: 'https://discog.localplayer.dev/logo.png',
 		description: 'The optimal bot for your Discord server'
 	},
 	openGraph: {
@@ -64,10 +66,8 @@ export default function HomePage() {
 								DisCog is a free and open-source Discord bot made to simplify
 								your Discord life.
 							</p>
-							<div className="buttons" id='button-scroll-to-invite'>
-								<div
-									className="button is-blurple has-text-weight-bold"
-								>
+							<div className="buttons" id="button-scroll-to-invite">
+								<div className="button is-blurple has-text-weight-bold">
 									Add To Discord
 								</div>
 							</div>
@@ -257,15 +257,15 @@ export default function HomePage() {
 						</div>
 						<div className="column">
 							<h4 className="title">
-								Coming soon:{' '}
-								<span className="has-text-info">Audit Logging</span>
+								Per-Server <span className="has-text-info">Audit Logging</span>
 							</h4>
 							<p className="subtitle mt-3">
 								Discord by default stores audit log entries for 45 days. Server
-								admins cannot see further into the past. This in-development
-								feature, when completed, will allow server admins to view all
-								actions taken since the beginning of time. DisCog will log and
-								store all audit log events <em>permanently</em>.
+								admins cannot see further into the past. This feature allows
+								server admins to view all actions taken since the beginning of
+								time. DisCog will log events in a channel of the admins&apos;
+								choice (configurable via the <Code>/conf auditlog</Code>{' '}
+								subcommand).
 							</p>
 						</div>
 					</div>
@@ -279,37 +279,7 @@ export default function HomePage() {
 					<div className="line line-center blurple"></div>
 				</div>
 
-				<div className="columns mt-6">
-					<div className="column has-text-centered">
-						<p
-							className="title has-text-weight-bold lined mono"
-							id="server-count"
-						>
-							not enough
-						</p>
-						<span className="subtitle has-text-weight-bold blurple">
-							{/* @ts-expect-error */}
-							<FontAwesomeIcon icon={faServer} size="xs" /> Servers
-						</span>
-					</div>
-
-					<div className="column has-text-centered">
-						<p
-							className="title has-text-weight-bold lined mono"
-							id="command-count"
-						>
-							20+
-						</p>
-						<span className="subtitle has-text-weight-bold blurple">
-							{/* @ts-expect-error */}
-							<FontAwesomeIcon icon={faTerminal} /> Commands
-							<br />
-							<span className="fs08m">
-								(each with numerous subcommands and options)
-							</span>
-						</span>
-					</div>
-				</div>
+				<Counter />
 			</section>
 
 			<section id="status" className="section mt-6">
@@ -356,13 +326,13 @@ export default function HomePage() {
 							src="/assets/img/relaunch_day.svg"
 							width={754 / 2}
 							height={750 / 2}
+							priority={true}
 						/>
 					</div>
 				</div>
 			</section>
 			<Footer storysetAttribution={true} />
 			<ScriptLoader />
-			<Script src="/assets/js/count.js" strategy="lazyOnload" />
 		</>
 	);
 }

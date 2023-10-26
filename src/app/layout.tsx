@@ -1,8 +1,11 @@
-import './aos@2.3.4.min.css';
-import './bulma.min.css';
+import 'aos/dist/aos.css';
+import 'bulma/css/bulma.min.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import './globals.css';
+import './out.css';
 import type { Metadata } from 'next';
+import Footer from '@/components/Footer';
+import { ReactNode } from 'react';
+import { Providers } from './providers';
 
 export const metadata: Metadata = {
 	title: 'DisCog',
@@ -41,14 +44,12 @@ export const metadata: Metadata = {
 	}
 };
 
-export default function RootLayout({
-	children
-}: {
-	children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<html lang="en-US">
-			<body>{children}</body>
+		<html lang="en-us" className="">
+			<body>
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
 }

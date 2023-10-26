@@ -8,7 +8,7 @@ export default function BackToTop() {
 				// @ts-expect-error
 				icon={faArrowUp}
 				size="2xl"
-				className="has-text-white mt-05"
+				className="has-text-white mt-2"
 			/>
 		</div>
 	);

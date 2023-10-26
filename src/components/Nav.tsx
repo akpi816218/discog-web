@@ -2,11 +2,12 @@ import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import DarkBtn from './DarkBtn';
 
 export default function Nav({
 	selected
 }: {
-	selected: 'none' | 'home' | 'invite' | 'dev';
+	selected: 'none' | 'home' | 'invite' | 'dev' | 'commands';
 }) {
 	return (
 		<nav
@@ -27,6 +28,7 @@ export default function Nav({
 					aria-label="menu"
 					aria-expanded="false"
 				>
+					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
@@ -61,9 +63,20 @@ export default function Nav({
 					>
 						About the Dev
 					</Link>
+
+					<Link
+						href="/commands/#"
+						className={`navbar-item is-tab${
+							selected === 'commands' ? ' is-active' : ''
+						}`}
+					>
+						Commands
+					</Link>
 				</div>
 
 				<div className="navbar-end">
+					<DarkBtn />
+
 					<Link
 						href="/invite/support-server"
 						className="navbar-item is-tab"

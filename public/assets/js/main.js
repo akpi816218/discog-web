@@ -52,9 +52,10 @@ $(window).on('scroll', () => {
 // scroll down chevron
 $('#scroll-down-chevron').on('click', () => {
 	$(window).scrollTop(
-		$('#features').offset()?.top ??
+		($('#features').offset()?.top ??
 			$('#invite').offset()?.top ??
-			$('#akpi816218').offset()?.top
+			$('#akpi816218').offset()?.top ??
+			$('#commandslist').offset()?.top) - $('nav').height()
 	);
 });
 

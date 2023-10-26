@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -225,74 +225,6 @@ section#features {
 	max-height: 2em;
 }
 
-.pt-12 {
-	padding-top: 6rem;
-}
-
-.pb-12 {
-	padding-bottom: 6rem;
-}
-
-.pl-12 {
-	padding-left: 6rem;
-}
-
-.pr-12 {
-	padding-right: 6rem;
-}
-
-.pt-6 {
-	padding-top: 3rem;
-}
-
-.pb-6 {
-	padding-bottom: 3rem;
-}
-
-.pl-6 {
-	padding-left: 3rem;
-}
-
-.pr-6 {
-	padding-right: 3rem;
-}
-
-.pt-0 {
-	padding-top: 0;
-}
-
-.pb-0 {
-	padding-bottom: 0;
-}
-
-.pl-0 {
-	padding-left: 0;
-}
-
-.pr-0 {
-	padding-right: 0;
-}
-
-.mb-12 {
-	margin-bottom: 6rem;
-}
-
-.mt-12 {
-	margin-top: 6rem;
-}
-
-.mt-05 {
-	margin-top: 0.5rem;
-}
-
-.ml-12 {
-	margin-left: 6rem;
-}
-
-.mr-12 {
-	margin-right: 6rem;
-}
-
 .img-col-ml-13 {
 	margin-left: 13rem;
 }
@@ -375,7 +307,7 @@ section#features {
 	padding-bottom: 5px;
 }
 
-.vm2-parent:hover>.vert-move2 {
+.vm2-parent:hover > .vert-move2 {
 	-webkit-animation: mover 0.25s infinite alternate;
 	-moz-animation: mover 0.25s infinite alternate;
 	-ms-animation: mover 0.25s infinite alternate;
@@ -488,7 +420,7 @@ section#features {
 .button:focus {
 	border: none;
 	box-shadow: none;
-	--duration: .625s;
+	--duration: 0.625s;
 	animation: button-pulse var(--duration) infinite alternate;
 	-webkit-animation: button-pulse var(--duration) infinite alternate;
 	-moz-animation: button-pulse var(--duration) infinite alternate;
