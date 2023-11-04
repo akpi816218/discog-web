@@ -5,9 +5,9 @@ import Link from 'next/link';
 import DarkBtn from './DarkBtn';
 
 export default function Nav({
-	selected
+	selected = 'none'
 }: {
-	selected: 'none' | 'home' | 'invite' | 'dev' | 'commands';
+	selected?: 'none' | 'home' | 'invite' | 'dev' | 'commands';
 }) {
 	return (
 		<nav

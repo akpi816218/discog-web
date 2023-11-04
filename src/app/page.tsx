@@ -1,12 +1,9 @@
-import { faServer, faTerminal } from '@fortawesome/fontawesome-free-solid';
 import BackToTop from '@/components/BackToTop';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '@/components/Footer';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import Script from 'next/script';
 import ScriptLoader from '@/components/ScriptLoader';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import Code from '@/components/Code';
