@@ -10,7 +10,7 @@
 	},
 	"private": true,
 	"scripts": {
-		"build": "npm urn upgrade && npm urn format && npm urn lint && npm urn bundle && npm urn tailwind",
+		"build": "npm urn upgrade && npm urn format && npm urn lint && npm urn bundle && npm urn tailwind && next build",
 		"bundle": "ncu -u jquery aos && npm i && cat ./node_modules/jquery/dist/jquery.min.js ./node_modules/aos/dist/aos.js ./public/assets/js/main.js > ./public/assets/js/dist-bundle.min.js",
 		"dev": "next dev",
 		"format": "prettier -w .",
