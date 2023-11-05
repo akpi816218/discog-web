@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
-	output: 'export',
-	distDir: 'out',
-	images: { unoptimized: true },
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'cdn.discordapp.com',
+				pathname: '/avatars/*/*.png'
+			}
+		]
+	},
 	trailingSlash: true
 };
 
