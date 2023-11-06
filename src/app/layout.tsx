@@ -3,7 +3,6 @@ import 'bulma/css/bulma.min.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import './out.css';
 import type { Metadata } from 'next';
-import Footer from '@/components/Footer';
 import { ReactNode } from 'react';
 import { Providers } from './providers';
 
@@ -44,10 +43,16 @@ export const metadata: Metadata = {
 	}
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+	children,
+	suppressHydrationWarning
+}: {
+	children: ReactNode;
+	suppressHydrationWarning?: boolean;
+}) {
 	return (
-		<html lang="en-us" className="">
-			<body>
+		<html lang="en-US">
+			<body suppressHydrationWarning={suppressHydrationWarning}>
 				<Providers>{children}</Providers>
 			</body>
 		</html>

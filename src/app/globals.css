@@ -57,6 +57,10 @@ a,
 	color: var(--blurple) !important;
 }
 
+.bg-blurple {
+	background-color: var(--blurple) !important;
+}
+
 .dark-blurple {
 	color: var(--dark-blurple);
 }
@@ -307,7 +311,7 @@ section#features {
 	padding-bottom: 5px;
 }
 
-.vm2-parent:hover > .vert-move2 {
+.vm2-parent:hover>.vert-move2 {
 	-webkit-animation: mover 0.25s infinite alternate;
 	-moz-animation: mover 0.25s infinite alternate;
 	-ms-animation: mover 0.25s infinite alternate;

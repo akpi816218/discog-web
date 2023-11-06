@@ -1,14 +1,18 @@
+'use client';
+
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import DarkBtn from './DarkBtn';
+import { useSession } from 'next-auth/react';
 
 export default function Nav({
 	selected = 'none'
 }: {
 	selected?: 'none' | 'home' | 'invite' | 'dev' | 'commands';
 }) {
+	const { data: session } = useSession();
+
 	return (
 		<nav
 			className="navbar is-fixed-top pl-2 pr-3"
@@ -75,7 +79,12 @@ export default function Nav({
 				</div>
 
 				<div className="navbar-end">
-					<DarkBtn />
+					<Link
+						href="/dashboard"
+						className="navbar-item is-tab rounded-xl bg-blurple h-min w-min align-middle my-auto p-2"
+					>
+						Dashboard
+					</Link>
 
 					<Link
 						href="/invite/support-server"

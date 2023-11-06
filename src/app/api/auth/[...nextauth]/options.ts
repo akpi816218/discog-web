@@ -1,4 +1,5 @@
-import { NextAuthOptions } from 'next-auth';
+import { Account, NextAuthOptions, Session } from 'next-auth';
+import { JWT } from 'next-auth/jwt';
 import DiscordProvider from 'next-auth/providers/discord';
 
 export const options: NextAuthOptions = {
@@ -8,8 +9,7 @@ export const options: NextAuthOptions = {
 			clientSecret: process.env.DISCORD_SECRET as string,
 			authorization: {
 				params: {
-					scope: 'identify guilds guilds.members.read',
-					redirect_uri: `${process.env.NEXTAUTH_URL}/dashboard/`
+					scope: 'identify guilds guilds.members.read'
 				}
 			},
 			style: {
@@ -19,5 +19,23 @@ export const options: NextAuthOptions = {
 				text: '#FFFFFF'
 			}
 		})
-	]
+	],
+	callbacks: {
+		async jwt({ token, account }: { token: JWT; account: Account | null }) {
+			if (account) {
+				token.accessToken = account.access_token;
+				token.tokenType = account.token_type;
+			}
+			return token;
+		},
+		async session({ session, token }: { session: Session; token: JWT }) {
+			if (session) {
+				// @ts-expect-error
+				session.accessToken = token.accessToken;
+				// @ts-expect-error
+				session.tokenType = token.tokenType;
+			}
+			return session;
+		}
+	}
 };
