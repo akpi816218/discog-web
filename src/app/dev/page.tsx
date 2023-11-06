@@ -16,7 +16,7 @@ import { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import ScriptLoader from '@/components/ScriptLoader';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
-import { faGlobe } from '@fortawesome/fontawesome-free-solid';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
 	title: 'DisCog | About the Developer',
@@ -123,7 +123,6 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
-							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGlobe} />
 						</span>
 						<span>Website</span>

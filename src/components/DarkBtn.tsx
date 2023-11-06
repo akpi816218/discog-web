@@ -1,6 +1,6 @@
 'use client';
 
-import { faMoon, faSun } from '@fortawesome/fontawesome-free-solid';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
@@ -54,7 +54,6 @@ export default function DarkBtn() {
 				e.preventDefault();
 			}}
 		>
-			{/* @ts-expect-error */}
 			<FontAwesomeIcon icon={darkTheme ? faMoon : faSun} />
 		</Link>
 	);

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleDown } from '@fortawesome/fontawesome-free-solid';
+import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 export default function ScrollDownChevron({
 	className,
@@ -18,7 +18,6 @@ export default function ScrollDownChevron({
 		>
 			<div className="is-block vert-move2">
 				<FontAwesomeIcon
-					// @ts-expect-error
 					icon={faChevronCircleDown}
 					size="2xl"
 					className="has-text-white"
