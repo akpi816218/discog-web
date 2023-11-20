@@ -1,11 +1,11 @@
 'use client';
 
-import API_BASE from '@/config';
+import { API_BASE } from '@/config';
 import { faServer, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Counter() {
-	fetch(`${API_BASE}/`, {
+	fetch(`${API_BASE}/bot`, {
 		method: 'GET',
 		headers: [
 			['Content-Type', 'application/json'],
