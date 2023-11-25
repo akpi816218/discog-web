@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 export default function Counter() {
 	useEffect(() => {
-		fetch(`${API_BASE}/`, {
+		fetch(`${API_BASE}/bot`, {
 			method: 'GET',
 			headers: [
 				['Content-Type', 'application/json'],

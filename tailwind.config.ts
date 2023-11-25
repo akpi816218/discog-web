@@ -8,5 +8,14 @@ export default {
 		'src/**/**/*.tsx',
 		'node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
 	],
-	plugins: [nextui()]
+	plugins: [nextui()],
+	theme: {
+		extend: {
+			colors: {
+				blurple: '#5865F2',
+				'dark-blurple': '#454FBF',
+				'not-quite-black': '#23272A'
+			}
+		}
+	}
 } satisfies Config;
