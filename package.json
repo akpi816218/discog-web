@@ -7,10 +7,11 @@
 	},
 	"private": true,
 	"scripts": {
-		"build": "npm ci && npm urn fmt && npm urn tw && next build",
+		"build": "npm ci && npm urn tw && next build",
 		"dev": "next dev",
 		"fmt": "prettier -w .",
 		"lint": "tsc && next lint",
+		"start": "next start",
 		"tw": "tailwindcss -m -i src/styles/in.css -o src/styles/out.css",
 		"tww": "npm urn tw -- -w",
 		"up": "ncu -u && npm i"

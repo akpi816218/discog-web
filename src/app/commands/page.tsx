@@ -14,7 +14,7 @@ export default function AboutTheDevPage() {
 		<>
 			<BackToTop />
 
-			<Nav selected="commands" />
+			<Nav />
 
 			<section className="hero bg-base is-fullheight pb-12">
 				<div className="hero-body">

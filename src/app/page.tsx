@@ -1,19 +1,18 @@
 import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import Image from 'next/legacy/image';
-import Link from 'next/link';
-import { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import Code from '@/components/Code';
 import Counter from '@/components/Counter';
+import { Link } from '@nextui-org/react';
 
 export default function HomePage() {
 	return (
 		<>
 			<BackToTop />
 
-			<Nav selected="home" />
+			<Nav />
 
 			<section className="hero bg-base is-fullheight-with-navbar">
 				<div className="hero-body">
@@ -270,11 +269,7 @@ export default function HomePage() {
 							</span>{' '}
 							We&apos;re always looking for new servers to have our bot in.
 						</p>
-						<Link
-							href="/invite"
-							className="button is-dark-blurple is-medium"
-							prefetch={true}
-						>
+						<Link href="/invite" className="button is-dark-blurple is-medium">
 							<strong>Get Started</strong>
 						</Link>
 					</div>

@@ -11,11 +11,11 @@ import BackToTop from '@/components/BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '@/components/Footer';
 import Image from 'next/legacy/image';
-import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { Link } from '@nextui-org/react';
 
 export const metadata: Metadata = {
 	title: 'About the Developer'
@@ -26,7 +26,7 @@ export default function AboutTheDevPage() {
 		<>
 			<BackToTop />
 
-			<Nav selected="dev" />
+			<Nav />
 
 			<section className="hero bg-base is-fullheight pb-12">
 				<div className="hero-body">

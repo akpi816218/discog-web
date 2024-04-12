@@ -15,7 +15,7 @@ export default function InvitePage() {
 		<>
 			<BackToTop />
 
-			<Nav selected="invite" />
+			<Nav />
 
 			<section className="hero bg-base is-fullheight pb-6">
 				<div className="hero-head"></div>

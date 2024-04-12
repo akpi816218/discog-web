@@ -20,7 +20,7 @@ export default function Err404Page() {
 				/>
 			</Link> */}
 
-			<Nav selected="none" />
+			<Nav />
 
 			<section className="hero bg-base is-fullheight-with-navbar is-dark">
 				<div className="hero-body">

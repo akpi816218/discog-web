@@ -13,9 +13,12 @@ import {
 	NavbarMenuItem
 } from '@nextui-org/react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export default function Nav() {
+	const Pathname = usePathname();
+
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const menuItems = [
@@ -48,13 +51,11 @@ export default function Nav() {
 			</NavbarBrand>
 			<NavbarContent className="hidden sm:flex gap-4" justify="center">
 				{menuItems.map(item => (
-					<NavbarItem isActive={window.location.pathname === item.href}>
+					<NavbarItem isActive={Pathname === item.href}>
 						<Link
 							isBlock
-							color={
-								window.location.pathname === item.href ? 'success' : 'primary'
-							}
-							href={window.location.pathname === item.href ? '#' : item.href}
+							color={Pathname === item.href ? 'success' : 'primary'}
+							href={Pathname === item.href ? '#' : item.href}
 						>
 							{item.name}
 						</Link>
@@ -82,12 +83,10 @@ export default function Nav() {
 			</NavbarContent>
 			<NavbarMenu className="bg-gradient-to-b from-neutral-800 to-[#26262684] p-8">
 				{menuItems.map(item => (
-					<NavbarMenuItem isActive={window.location.href === item.href}>
+					<NavbarMenuItem isActive={Pathname === item.href}>
 						<Link
-							color={
-								window.location.pathname === item.href ? 'success' : 'secondary'
-							}
-							href={window.location.pathname === item.href ? '#' : item.href}
+							color={Pathname === item.href ? 'success' : 'primary'}
+							href={Pathname === item.href ? '#' : item.href}
 							className="w-full text-xl rounded-2xl active:bg-neutral-600 active:text-blue-400 p-2"
 							size="lg"
 						>

@@ -1,0 +1,10 @@
+.github
+.next
+node_modules
+.git*
+.prettier*
+next-env.d.ts
+README.md
+out
+_.log
+_.tsbuildinfo

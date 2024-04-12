@@ -3,24 +3,27 @@
 import { API_BASE } from '@/config';
 import { faServer, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect, useState } from 'react';
 
 export default function Counter() {
-	fetch(`${API_BASE}/bot`, {
-		method: 'GET',
-		headers: [
-			['Content-Type', 'application/json'],
-			['Access-Control-Allow-Origin', '*']
-		]
-	})
-		.then(res => res.json())
-		.then(data => {
-			window.document.getElementById('server-count')!.innerText =
-				data.guildCount;
-			window.document.getElementById('command-count')!.innerText =
-				data.commandCount ?? '20+';
-			// document.getElementById('user-count').innerText = data.userCount;
+	const [serverCount, setServerCount] = useState<number>(0);
+	const [commandCount, setCommandCount] = useState<number>(0);
+
+	useEffect(() => {
+		fetch(`${API_BASE}/bot`, {
+			method: 'GET',
+			headers: [
+				['Content-Type', 'application/json'],
+				['Access-Control-Allow-Origin', '*']
+			]
 		})
-		.catch();
+			.then(res => res.json())
+			.then(data => {
+				setCommandCount(data.commandCount);
+				setServerCount(data.serverCount);
+			})
+			.catch();
+	});
 
 	return (
 		<div className="columns mt-6">
