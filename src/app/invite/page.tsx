@@ -46,7 +46,7 @@ export default function InvitePage() {
 						</div>
 					</div>
 				</div>
-				<ScrollDownChevron />
+				<ScrollDownChevron target="invite" />
 			</section>
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

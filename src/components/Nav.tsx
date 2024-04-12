@@ -37,7 +37,8 @@ export default function Nav() {
 			<NavbarBrand>
 				<Link
 					href="/"
-					className="text-white font-black text-2xl flex flex-row items-center py-4"
+					className="font-black text-2xl flex flex-row items-center py-4"
+					color="foreground"
 				>
 					<Image
 						alt="DisCog logo"
@@ -50,8 +51,8 @@ export default function Nav() {
 				</Link>
 			</NavbarBrand>
 			<NavbarContent className="hidden sm:flex gap-4" justify="center">
-				{menuItems.map(item => (
-					<NavbarItem isActive={Pathname === item.href}>
+				{...menuItems.map(item => (
+					<NavbarItem isActive={Pathname === item.href} key={item.href}>
 						<Link
 							isBlock
 							color={Pathname === item.href ? 'success' : 'primary'}
@@ -82,8 +83,8 @@ export default function Nav() {
 				</NavbarItem>
 			</NavbarContent>
 			<NavbarMenu className="bg-gradient-to-b from-neutral-800 to-[#26262684] p-8">
-				{menuItems.map(item => (
-					<NavbarMenuItem isActive={Pathname === item.href}>
+				{...menuItems.map(item => (
+					<NavbarMenuItem isActive={Pathname === item.href} key={item.href}>
 						<Link
 							color={Pathname === item.href ? 'success' : 'primary'}
 							href={Pathname === item.href ? '#' : item.href}

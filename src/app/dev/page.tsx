@@ -53,7 +53,7 @@ export default function AboutTheDevPage() {
 						</div>
 					</div>
 				</div>
-				<ScrollDownChevron />
+				<ScrollDownChevron target="akpi" />
 			</section>
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

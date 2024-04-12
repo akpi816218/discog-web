@@ -17,12 +17,13 @@ export default function Counter() {
 				['Access-Control-Allow-Origin', '*']
 			]
 		})
-			.then(res => res.json())
-			.then(data => {
-				setCommandCount(data.commandCount);
-				setServerCount(data.serverCount);
-			})
-			.catch();
+			.then(res =>
+				res.json().then(data => {
+					setCommandCount(data.commandCount);
+					setServerCount(data.serverCount);
+				})
+			)
+			.catch(console.error);
 	});
 
 	return (

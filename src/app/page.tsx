@@ -1,11 +1,19 @@
+'use client';
+
 import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Nav from '@/components/Nav';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import Code from '@/components/Code';
 import Counter from '@/components/Counter';
-import { Link } from '@nextui-org/react';
+import { Button, Link } from '@nextui-org/react';
+import {
+	Element,
+	Link as ScrollLink,
+	animateScroll,
+	scrollSpy
+} from 'react-scroll';
 
 export default function HomePage() {
 	return (
@@ -14,37 +22,41 @@ export default function HomePage() {
 
 			<Nav />
 
-			<section className="hero bg-base is-fullheight-with-navbar">
-				<div className="hero-body">
-					<div className="columns">
-						<div className="column mr-6 mt-12" data-aos="fade-up">
-							<p className="title has-text-white has-text-weight-bold">
-								Time to add DisCog to your server!
-							</p>
-							<p className="subtitle has-text-grey-light is-size-6 mt-3">
-								DisCog is a free and open-source Discord bot made to simplify
-								your Discord life.
-							</p>
-							<div className="buttons" id="button-scroll-to-invite">
-								<div className="button is-blurple has-text-weight-bold">
-									Add To Discord
-								</div>
-							</div>
-						</div>
-						<div className="column has-text-centered" data-aos="fade-left">
-							{/* eslint-disable-next-line @next/next/no-img-element */}
-							<img
-								className="image vert-move"
-								src="/logo.png"
-								width={409}
-								height={409}
-								alt="logo image"
-							/>
+			<section className="bg-base min-h-[100vh] mt-[var(--navbar-height)] px-12 py-24 flex flex-col items-stretch">
+				<div className="grow flex flex-row items-stretch gap-8">
+					<div className="flex flex-col justify-center gap-8 animate-fade-in-top">
+						<p className="text-3xl text-white font-bold">
+							Time to add DisCog to your server!
+						</p>
+						<p className="text-neutral-400 text-lg">
+							DisCog is a free and open-source Discord bot made to simplify your
+							Discord experience.
+						</p>
+						<div className="flex flex-row justify-center">
+							<ScrollLink
+								to="invite"
+								spy
+								smooth
+								duration={250}
+								className="py-3 px-4 rounded-2xl bg-neutral-200 font-medium text-lg text-blurple hover:cursor-pointer hover:bg-neutral-300 hover:scale-95"
+							>
+								Add To Discord
+							</ScrollLink>
 						</div>
 					</div>
+					<div className="place-content-center hidden md:grid">
+						<Image
+							className="image vert-move animate-fade-in-left"
+							src="/logo.png"
+							width={409}
+							height={409}
+							alt="logo image"
+						/>
+					</div>
 				</div>
-				<ScrollDownChevron />
+				<ScrollDownChevron target="features" />
 			</section>
+			<Element name="features" />
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
@@ -54,118 +66,56 @@ export default function HomePage() {
 				></path>
 			</svg>
 
-			<section id="features" className="section">
-				<div className="has-text-centered mt-6">
-					<h1 className="title lined">Features</h1>
-					<div className="line line-center blurple"></div>
+			<section className="py-16 px-12">
+				<div className="flex flex-col items-center">
+					<div className="flex flex-col items-stretch w-fit">
+						<h1 className="text-2xl text-center font-semibold">Features</h1>
+						<div className="bg-blurple h-1" />
+					</div>
 				</div>
 
-				<div className="single-feature">
-					<div className="shape-right" data-aos="fade-up-left">
-						<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-							<path
-								fill="#9AAAE3"
-								d="M42.7,-62.9C50.9,-52.8,50.1,-34.4,51.7,-19.2C53.4,-4,57.4,8,56.6,20.8C55.8,33.7,50.1,47.4,39.9,53.8C29.6,60.1,14.8,59.1,0.4,58.5C-14,58,-28,57.9,-38,51.5C-48.1,45,-54.3,32.3,-61.3,18.1C-68.4,4,-76.4,-11.7,-71.9,-22.7C-67.4,-33.6,-50.4,-39.8,-36.3,-47.9C-22.2,-56.1,-11.1,-66.3,3.1,-70.5C17.2,-74.7,34.5,-72.9,42.7,-62.9Z"
-								transform="translate(90 90)"
-							/>
-						</svg>
+				<div className="flex flex-row mt-6 gap-4">
+					<div className="basis-6 grow">
+						<h4 className="text-xl font-medium">
+							<span className="text-blurple">Birthday</span> Greetings
+						</h4>
+						<p className="mt-3">
+							With DisCog, forgetting someone&apos;s birthday is impossible.
+							Every day at 12:00 AM PST, DisCog will send a message wishing a
+							happy birthday to anyone who has their birthday set via slash
+							commands. The intelligent internal algorithm first looks for any
+							appropriate channel or will try to send the message in the
+							server&apos;s System Channel. We will never sell your data.
+						</p>
 					</div>
-
-					<div className="columns mt-6">
-						<div className="column mr-6">
-							<h4 className="title">
-								<span className="blurple">Birthday</span> Greetings
-							</h4>
-							<p className="subtitle mt-3">
-								With DisCog, forgetting someone&apos;s birthday is impossible.
-								Every day at 12:00 AM PST, DisCog will send a message wishing a
-								happy birthday to anyone who has their birthday set in DisCog.
-								The intelligent internal algorithm first looks for any channel
-								whose name contains &quot;birthday&quot; or &quot;bday&quot; and
-								sends the message there. If no such channel is found, DisCog
-								will try to send the message in the server&apos;s System
-								Channel. If that does not exist either, it will choose the first
-								channel it can send messages in. DisCog will never sell your
-								data. Only people with servers in common with you can see your
-								birthday.
-							</p>
-						</div>
-						<div
-							className="column has-text-centered"
-							data-aos="fade-left"
-							data-aos-delay="300"
-						>
-							<Image
-								className="image w20r"
-								src="/assets/img/ice_cream_cake-rafiki.svg"
-								width={1024 / 3}
-								height={1024 / 3}
-								alt="feature1 img"
-							/>
-						</div>
+					<div className="basis-3 grow text-center animate-fade-in-top">
+						<Image
+							className="image w20r"
+							src="/assets/img/ice_cream_cake-rafiki.svg"
+							width={1024 / 3}
+							height={1024 / 3}
+							alt="feature1 img"
+						/>
 					</div>
 				</div>
 				<br />
-				<div className="single-feature">
-					<div className="shape-left" data-aos="fade-up-right">
-						<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-							<path
-								fill="#9AAAE3"
-								d="M54.2,-67.2C69.4,-63.5,80.4,-46.6,84.6,-28.7C88.7,-10.8,86,8.1,76.8,21.4C67.6,34.7,51.9,42.3,38.1,50.3C24.2,58.3,12.1,66.7,-2.8,70.5C-17.7,74.3,-35.3,73.6,-45.6,64.5C-55.9,55.3,-58.8,37.7,-63.3,21.2C-67.7,4.7,-73.7,-10.6,-71.8,-25.4C-69.8,-40.2,-59.9,-54.5,-46.6,-58.9C-33.3,-63.2,-16.7,-57.6,1.4,-59.6C19.5,-61.5,39,-71,54.2,-67.2Z"
-								transform="translate(100 130)"
-							/>
-						</svg>
-					</div>
 
-					<div className="columns mt-6">
-						<div
-							className="column has-text-centered"
-							data-aos="fade-right"
-							data-aos-delay="300"
-						>
-							<Image
-								className="image w20r"
-								src="/assets/img/id_card-rafiki.svg"
-								width={800}
-								height={800}
-								alt="feature1 img"
-							/>
-						</div>
-						<div className="column">
-							<h4 className="title">
-								User <span className="has-text-primary">Identity Profiles</span>
-							</h4>
-							<p className="subtitle mt-3">
-								DisCog features a unique Identity profile for each user. Members
-								can set their preferred name, pronouns, gender, and more. No
-								more fighting to keep your Discord bio under the 190 character
-								limit! DisCog allows you up to 500 characters to express
-								yourself thoroughly. DisCog will never sell your data. Only
-								people with servers in common with you can see your identity
-								profile.
-							</p>
-						</div>
+				<div className="flex flex-row mt-6">
+					<div className="hidden lg:grid place-content-center animate-fade-in-top basis-10 grow">
+						<Image
+							className="image w20r"
+							src="/assets/img/data_extraction-rafiki.svg"
+							width={741}
+							height={608}
+							alt="feature1 img"
+						/>
 					</div>
-				</div>
-				<br />
-				<div className="single-feature">
-					<div className="shape-right" data-aos="fade-up-left">
-						<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-							<path
-								fill="#9AAAE3"
-								d="M42.7,-62.9C50.9,-52.8,50.1,-34.4,51.7,-19.2C53.4,-4,57.4,8,56.6,20.8C55.8,33.7,50.1,47.4,39.9,53.8C29.6,60.1,14.8,59.1,0.4,58.5C-14,58,-28,57.9,-38,51.5C-48.1,45,-54.3,32.3,-61.3,18.1C-68.4,4,-76.4,-11.7,-71.9,-22.7C-67.4,-33.6,-50.4,-39.8,-36.3,-47.9C-22.2,-56.1,-11.1,-66.3,3.1,-70.5C17.2,-74.7,34.5,-72.9,42.7,-62.9Z"
-								transform="translate(80 60) scale(.75)"
-							/>
-						</svg>
-					</div>
-
-					<div className="columns mt-6">
-						<div className="column mr-6">
-							<h4 className="title">
-								Helpful <span className="has-text-warning">Utility</span>{' '}
-								Commands
+					<div className="basis-4 grow flex flex-col items-stretch justify-evenly">
+						<div>
+							<h4 className="text-xl font-medium">
+								Helpful <span className="text-warning">Utility</span> Commands
 							</h4>
-							<p className="subtitle mt-3">
+							<p className="mt-3">
 								A lot of the commands in DisCog are utility commands. DisCog has
 								commands to create announcements, polls, and much more!
 								Utilizing the functionality of message embeds, DisCog can create
@@ -173,90 +123,57 @@ export default function HomePage() {
 								understand, simplifying the tasks of server moderators.
 							</p>
 						</div>
-						<div
-							className="column has-text-centered"
-							data-aos="fade-left"
-							data-aos-delay="300"
-						>
-							<Image
-								className="image w20r"
-								src="/assets/img/settings-sparkle.svg"
-								width={128}
-								height={128}
-								alt="feature1 img"
-							/>
-						</div>
-					</div>
-				</div>
-				<br />
-				<div className="single-feature">
-					<div className="shape-left" data-aos="fade-up-right">
-						<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-							<path
-								fill="#9AAAE3"
-								d="M54.2,-67.2C69.4,-63.5,80.4,-46.6,84.6,-28.7C88.7,-10.8,86,8.1,76.8,21.4C67.6,34.7,51.9,42.3,38.1,50.3C24.2,58.3,12.1,66.7,-2.8,70.5C-17.7,74.3,-35.3,73.6,-45.6,64.5C-55.9,55.3,-58.8,37.7,-63.3,21.2C-67.7,4.7,-73.7,-10.6,-71.8,-25.4C-69.8,-40.2,-59.9,-54.5,-46.6,-58.9C-33.3,-63.2,-16.7,-57.6,1.4,-59.6C19.5,-61.5,39,-71,54.2,-67.2Z"
-								transform="translate(100 130)"
-							/>
-						</svg>
-					</div>
-
-					<div className="columns mt-6">
-						<div
-							className="column has-text-centered"
-							data-aos="fade-right"
-							data-aos-delay="300"
-						>
-							<Image
-								className="image w20r"
-								src="/assets/img/data_extraction-rafiki.svg"
-								width={741}
-								height={608}
-								alt="feature1 img"
-							/>
-						</div>
-						<div className="column">
-							<h4 className="title">
-								Per-Server <span className="has-text-info">Audit Logging</span>
+						<div>
+							<h4 className="text-xl font-medium">
+								Per-Server{' '}
+								<span className="text-[cornflowerblue]">Audit Logging</span>
 							</h4>
-							<p className="subtitle mt-3">
+							<p className="mt-3">
 								Discord by default stores audit log entries for 45 days. Server
 								admins cannot see further into the past. This feature allows
-								server admins to view all actions taken since the beginning of
-								time. DisCog will log events in a channel of the admins&apos;
-								choice (configurable via the <Code>/conf auditlog</Code>{' '}
-								subcommand).
+								server admins to store all their moderation logs without any
+								time limit. DisCog will log events in a channel of the
+								admins&apos; choice (configurable via the{' '}
+								<Code>/conf auditlog</Code> subcommand).
 							</p>
 						</div>
 					</div>
 				</div>
 				<br />
 			</section>
-			<p></p>
-			<section id="stats" className="section mt-6">
-				<div className="has-text-centered">
-					<h1 className="title lined">Stats</h1>
-					<div className="line line-center blurple"></div>
+
+			<section id="stats" className="mt-6">
+				<div className="flex flex-col items-center">
+					<div className="flex flex-col items-stretch w-fit">
+						<h1 className="text-2xl text-center font-semibold">Stats</h1>
+						<div className="bg-blurple h-1" />
+					</div>
 				</div>
 
-				<Counter />
+				{/* <Counter /> */}
 			</section>
 
-			<section id="status" className="section mt-6">
-				<div className="has-text-centered">
-					<div className="line line-center blurple" />
-					<Link
+			<section id="status" className="mt-6">
+				<div className="text-center">
+					<Button
 						href="/status"
 						target="_blank"
-						className="button rounded2 is-blurple is-size-1 mt-4 mb-4"
+						color="secondary"
+						className="my-4 text-white text-xl font-medium"
+						as="a"
+						size="lg"
 					>
 						Status Page
-					</Link>
-					<div className="line line-center blurple" />
+					</Button>
 				</div>
 			</section>
+			<Element name="invite" />
 
-			<section className="section mt-6" id="invite">
-				<div className="columns">
+			<section
+				className="mt-6 px-12 py-24 flex flex-col items-stretch bg-[#464d53]"
+				id="invite"
+			>
+				{/* <div className="columns">
 					<div className="column has-text-left">
 						<p className="title has-text-weight-bold">
 							Ready to try <span className="blurple">DisCog</span>?
@@ -282,6 +199,42 @@ export default function HomePage() {
 							width={754 / 2}
 							height={750 / 2}
 							priority={true}
+						/>
+					</div>
+				</div> */}
+				<div className="grow flex flex-row items-stretch gap-8">
+					<div className="flex flex-col justify-center gap-8 basis-4 grow">
+						<p className="text-3xl text-white font-bold">
+							Ready to try <span className="blurple">DisCog</span>?
+						</p>
+						<p className="text-white text-lg">
+							Get in contact with the developers and get DisCog in your server
+							today!{' '}
+							<span className="text-sm text-neutral-300">
+								(Don&apos;t worry, we don&apos;t bite ...unless you diss us.)
+							</span>{' '}
+							We&apos;re always looking for new servers to have our bot in.
+						</p>
+						<div className="flex flex-row justify-center">
+							<Button
+								href="/invite"
+								as="a"
+								color="secondary"
+								className="text-white text-xl"
+								size="lg"
+							>
+								<strong>Get Started</strong>
+							</Button>
+						</div>
+					</div>
+					<div className="place-content-center hidden md:grid basis-4 grow">
+						<Image
+							alt="rocket launch"
+							src="/assets/img/relaunch_day.svg"
+							width={754 / 2}
+							height={750 / 2}
+							priority={true}
+							className="animate-pulse"
 						/>
 					</div>
 				</div>
