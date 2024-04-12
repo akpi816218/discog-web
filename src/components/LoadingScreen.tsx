@@ -24,8 +24,8 @@ export default function LoadingScreen() {
 				We&apos;re doing our best to load the page as quick as possible, but
 				there seems to be a hitch. Or is it a glitch? If this message remains
 				too long, please contact me by{' '}
-				<Link href="mailto:816218@seq.org">email</Link> or create an Issue on
-				the{' '}
+				<Link href="mailto:akpi@opensourceforce.net">email</Link> or create an
+				Issue on the{' '}
 				<Link href="https://github.com/akpi816218/discog-web">
 					GitHub repository
 				</Link>

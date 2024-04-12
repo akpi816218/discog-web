@@ -6,7 +6,11 @@ export default {
 		'src/*.tsx',
 		'src/**/*.tsx',
 		'src/**/**/*.tsx',
+		'src/**/**/**/*.tsx',
+		'src/**/**/**/**/*.tsx',
+		'src/**/**/**/**/**/*.tsx',
+		'src/**/**/**/**/**/**/*.tsx',
 		'node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
 	],
-	plugins: [nextui()]
+	plugins: [nextui({})]
 } satisfies Config;

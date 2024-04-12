@@ -4,46 +4,9 @@ import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import ScriptLoader from '@/components/ScriptLoader';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import Code from '@/components/Code';
 import Counter from '@/components/Counter';
-
-export const metadata: Metadata = {
-	title: 'DisCog',
-	authors: { name: 'Akhil Pillai' },
-	keywords: [],
-	creator: 'Akhil Pillai',
-	generator: 'Next.js',
-	icons: ['/logo.png'],
-	description: 'The optimal bot for your Discord server',
-	twitter: {
-		card: 'summary_large_image',
-		site: '@discogbot',
-		creator: '@akpi816218',
-		images: 'https://discog.localplayer.dev/logo.png',
-		description: 'The optimal bot for your Discord server'
-	},
-	openGraph: {
-		title: 'DisCog',
-		description: 'The optimal bot for your Discord server',
-		url: 'https://discog.localplayer.dev',
-		siteName: 'DisCog',
-		countryName: 'United States',
-		locale: 'en-US',
-		type: 'website',
-		images: [
-			{
-				url: 'https://discog.localplayer.dev/logo.png',
-				type: 'image/png'
-			},
-			{
-				url: 'https://discog.localplayer.dev/banner.svg',
-				type: 'image/svg+xml'
-			}
-		]
-	}
-};
 
 export default function HomePage() {
 	return (
@@ -329,7 +292,6 @@ export default function HomePage() {
 				</div>
 			</section>
 			<Footer storysetAttribution={true} />
-			<ScriptLoader />
 		</>
 	);
 }

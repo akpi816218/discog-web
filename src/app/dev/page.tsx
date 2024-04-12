@@ -14,44 +14,11 @@ import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import ScriptLoader from '@/components/ScriptLoader';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 export const metadata: Metadata = {
-	title: 'DisCog | About the Developer',
-	authors: { name: 'Akhil Pillai' },
-	keywords: [],
-	creator: 'Akhil Pillai',
-	generator: 'Next.js',
-	icons: ['/logo.png'],
-	description: 'The optimal bot for your Discord server',
-	twitter: {
-		card: 'summary_large_image',
-		site: '@discogbot',
-		creator: '@akpi816218',
-		images: 'https://discog.localplayer.dev/banner.svg',
-		description: 'The optimal bot for your Discord server'
-	},
-	openGraph: {
-		title: 'DisCog | About the Developer',
-		description: 'The optimal bot for your Discord server',
-		url: 'https://discog.localplayer.dev',
-		siteName: 'DisCog',
-		countryName: 'United States',
-		locale: 'en-US',
-		type: 'website',
-		images: [
-			{
-				url: 'https://discog.localplayer.dev/logo.png',
-				type: 'image/png'
-			},
-			{
-				url: 'https://discog.localplayer.dev/banner.svg',
-				type: 'image/svg+xml'
-			}
-		]
-	}
+	title: 'About the Developer'
 };
 
 export default function AboutTheDevPage() {
@@ -123,6 +90,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGlobe} />
 						</span>
 						<span>Website</span>
@@ -133,6 +101,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGithub} />
 						</span>
 						<span>GitHub</span>
@@ -143,6 +112,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDiscord} />
 						</span>
 						<span>Discord</span>
@@ -153,6 +123,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faNpm} />
 						</span>
 						<span>NPM</span>
@@ -163,6 +134,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDev} />
 						</span>
 						<span>DEV Community</span>
@@ -189,6 +161,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faSpotify} />
 						</span>
 						<span>Spotify</span>
@@ -199,6 +172,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faYoutube} />
 						</span>
 						<span>YouTube</span>
@@ -209,6 +183,7 @@ export default function AboutTheDevPage() {
 						target="_blank"
 					>
 						<span className="icon">
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faSteam} />
 						</span>
 						<span>Steam</span>
@@ -239,7 +214,6 @@ export default function AboutTheDevPage() {
 				</div>
 			</section>
 			<Footer />
-			<ScriptLoader />
 		</>
 	);
 }

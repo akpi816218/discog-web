@@ -29,6 +29,7 @@ export default function Counter() {
 					not enough
 				</p>
 				<span className="subtitle has-text-weight-bold blurple">
+					{/* @ts-expect-error */}
 					<FontAwesomeIcon icon={faServer} size="xs" /> Servers
 				</span>
 			</div>
@@ -38,6 +39,7 @@ export default function Counter() {
 					20+
 				</p>
 				<span className="subtitle has-text-weight-bold blurple">
+					{/* @ts-expect-error */}
 					<FontAwesomeIcon icon={faTerminal} /> Commands
 					<br />
 					<span className="fs08m">

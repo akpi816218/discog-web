@@ -1,99 +1,101 @@
+'use client';
+
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Image from 'next/legacy/image';
-import Link from 'next/link';
-import DarkBtn from './DarkBtn';
+import {
+	Link,
+	Navbar,
+	NavbarMenuToggle,
+	NavbarBrand,
+	NavbarContent,
+	NavbarItem,
+	NavbarMenu,
+	NavbarMenuItem
+} from '@nextui-org/react';
+import Image from 'next/image';
+import { useState } from 'react';
 
-export default function Nav({
-	selected = 'none'
-}: {
-	selected?: 'none' | 'home' | 'invite' | 'dev' | 'commands';
-}) {
+export default function Nav() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const menuItems = [
+		{ name: 'Home', href: '/' },
+		{ name: 'Invite', href: '/invite/' },
+		{ name: 'About the Dev', href: '/dev/' },
+		{ name: 'Commands', href: '/commands/' }
+	];
+
 	return (
-		<nav
-			className="navbar is-fixed-top pl-2 pr-3"
-			role="navigation"
-			aria-label="main navigation"
-		>
-			<div className="navbar-brand mt-2 mb-2">
-				<Link className="navbar-item" href="/#">
-					<Image src="/logo.png" alt="DisCog logo" width="28" height="28" />
-					<strong className="ml-3">DisCog</strong>
-				</Link>
-
-				<div
-					role="button"
-					className="navbar-burger has-text-white"
-					data-target="navMenu"
-					aria-label="menu"
-					aria-expanded="false"
+		<Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
+			<NavbarMenuToggle
+				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+				className="sm:hidden"
+			/>
+			<NavbarBrand>
+				<Link
+					href="/"
+					className="text-white font-black text-2xl flex flex-row items-center py-4"
 				>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-				</div>
-			</div>
-
-			<div id="navbarBasicExample" className="navbar-menu">
-				<div className="navbar-start">
+					<Image
+						alt="DisCog logo"
+						height={32}
+						width={32}
+						src="/logo.png"
+						className="h-max aspect-square rounded-xl mr-4"
+					/>
+					DisCog
+				</Link>
+			</NavbarBrand>
+			<NavbarContent className="hidden sm:flex gap-4" justify="center">
+				{menuItems.map(item => (
+					<NavbarItem isActive={window.location.pathname === item.href}>
+						<Link
+							isBlock
+							color={
+								window.location.pathname === item.href ? 'success' : 'primary'
+							}
+							href={window.location.pathname === item.href ? '#' : item.href}
+						>
+							{item.name}
+						</Link>
+					</NavbarItem>
+				))}
+			</NavbarContent>
+			<NavbarContent justify="end">
+				<NavbarItem>
 					<Link
-						href="/#"
-						className={`navbar-item is-tab${
-							selected === 'home' ? ' is-active' : ''
-						}`}
-					>
-						Home
-					</Link>
-
-					<Link
-						href="/invite/#"
-						className={`navbar-item is-tab${
-							selected === 'invite' ? ' is-active' : ''
-						}`}
-					>
-						Invite
-					</Link>
-
-					<Link
-						href="/dev/#"
-						className={`navbar-item is-tab${
-							selected === 'dev' ? ' is-active' : ''
-						}`}
-					>
-						About the Dev
-					</Link>
-
-					<Link
-						href="/commands/#"
-						className={`navbar-item is-tab${
-							selected === 'commands' ? ' is-active' : ''
-						}`}
-					>
-						Commands
-					</Link>
-				</div>
-
-				<div className="navbar-end">
-					<DarkBtn />
-
-					<Link
-						href="/invite/support-server"
-						className="navbar-item is-tab"
-						target="_blank"
-					>
-						<FontAwesomeIcon icon={faDiscord} size="xl" />
-					</Link>
-
-					<Link
+						isExternal
+						isBlock
+						color="warning"
 						href="https://github.com/akpi816218/discog"
-						className="navbar-item is-tab"
-						target="_blank"
 					>
-						<FontAwesomeIcon icon={faGithub} size="xl" />
+						{/* @ts-expect-error */}
+						<FontAwesomeIcon icon={faGithub} size="lg" />
 					</Link>
-				</div>
-			</div>
-		</nav>
+				</NavbarItem>
+				<NavbarItem>
+					<Link isBlock color="warning" href="/invite/support-server">
+						{/* @ts-expect-error */}
+						<FontAwesomeIcon icon={faDiscord} size="lg" />
+					</Link>
+				</NavbarItem>
+			</NavbarContent>
+			<NavbarMenu className="bg-gradient-to-b from-neutral-800 to-[#26262684] p-8">
+				{menuItems.map(item => (
+					<NavbarMenuItem isActive={window.location.href === item.href}>
+						<Link
+							color={
+								window.location.pathname === item.href ? 'success' : 'secondary'
+							}
+							href={window.location.pathname === item.href ? '#' : item.href}
+							className="w-full text-xl rounded-2xl active:bg-neutral-600 active:text-blue-400 p-2"
+							size="lg"
+						>
+							{item.name}
+						</Link>
+					</NavbarMenuItem>
+				))}
+			</NavbarMenu>
+		</Navbar>
 	);
 }

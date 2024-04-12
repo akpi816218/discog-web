@@ -18,6 +18,7 @@ export default function ScrollDownChevron({
 		>
 			<div className="is-block vert-move2">
 				<FontAwesomeIcon
+					// @ts-expect-error
 					icon={faChevronCircleDown}
 					size="2xl"
 					className="has-text-white"

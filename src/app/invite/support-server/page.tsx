@@ -1,5 +1,5 @@
-import Script from 'next/script';
+import { permanentRedirect } from 'next/navigation';
 
 export default function InviteLinkRedirectPage() {
-	return <Script src="/assets/js/inviteRedirect.js" />;
+	permanentRedirect('https://discord.gg/7A7QwXVpsJ');
 }

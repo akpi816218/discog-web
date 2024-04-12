@@ -1,42 +1,31 @@
 {
 	"dependencies": {
-		"@fortawesome/free-solid-svg-icons": "",
-		"@fortawesome/free-brands-svg-icons": "^6.4.2",
+		"@fortawesome/free-brands-svg-icons": "^6.5.2",
+		"@fortawesome/free-solid-svg-icons": "^6.5.2",
 		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@nextui-org/react": "^2.2.9",
-		"aos": "^2.3.4",
-		"bulma": "^0.9.4",
-		"jquery": "^3.7.1"
+		"@nextui-org/react": "^2.2.10"
 	},
 	"private": true,
 	"scripts": {
-		"build": "npm urn upgrade && npm urn format && npm urn lint && npm urn bundle && npm urn tailwind && next build",
-		"bundle": "ncu -u jquery aos && npm i && cat ./node_modules/jquery/dist/jquery.min.js ./node_modules/aos/dist/aos.js ./public/assets/js/main.js > ./public/assets/js/dist-bundle.min.js",
+		"build": "npm ci && npm urn fmt && npm urn tw && next build",
 		"dev": "next dev",
-		"format": "prettier -w .",
+		"fmt": "prettier -w .",
 		"lint": "tsc && next lint",
-		"tailwind": "tailwindcss -m -i src/app/globals.css -o src/app/out.css",
-		"tailwind:watch": "npm urn tailwind -- -w",
-		"upgrade": "ncu -u && npm i"
+		"tw": "tailwindcss -m -i src/styles/in.css -o src/styles/out.css",
+		"tww": "npm urn tw -- -w",
+		"up": "ncu -u && npm i"
 	},
 	"type": "module",
 	"devDependencies": {
-		"@next/codemod": "^14.0.3",
-		"@types/aos": "^3.0.7",
-		"@types/jquery": "^3.5.27",
-		"@types/node": "20.9.2",
-		"@types/react": "18.2.37",
-		"@types/react-dom": "18.2.15",
-		"eslint": "8.54.0",
-		"eslint-config-next": "14.0.3",
-		"next": "14.0.3",
-		"npm-check-updates": "^16.14.11",
-		"prettier": "^3.1.0",
+		"@types/node": "20.12.7",
+		"@types/react": "18.2.77",
+		"@types/react-dom": "18.2.25",
+		"next": "14.2.0",
+		"npm-check-updates": "^16.14.18",
+		"prettier": "^3.2.5",
 		"react": "^18.2.0",
 		"react-dom": "18.2.0",
-		"serve": "^14.2.1",
-		"tailwindcss": "^3.3.5",
-		"typescript": "5.2.2",
-		"uglify-js": "^3.17.4"
+		"tailwindcss": "^3.4.3",
+		"typescript": "5.4.5"
 	}
 }

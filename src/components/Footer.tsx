@@ -17,6 +17,7 @@ export default function Footer({
 						className="has-text-white mr-2"
 						target="_blank"
 					>
+						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faDiscord} size="xl" />
 					</Link>
 					<Link
@@ -24,6 +25,7 @@ export default function Footer({
 						className="has-text-white ml-2"
 						target="_blank"
 					>
+						{/* @ts-expect-error */}
 						<FontAwesomeIcon icon={faGithub} size="xl" />
 					</Link>
 				</div>
@@ -31,22 +33,10 @@ export default function Footer({
 				<p>
 					<span className="has-text-weight-bold">DisCog</span>
 					<br />
-					&copy; <span id="cp-year">2023</span> Copyright{' '}
+					&copy; <span id="cp-year">2023-Present</span> Copyright{' '}
 					<Link href="https://github.com/akpi816218">akpi816218</Link>. All
 					Rights Reserved.
 				</p>
-				<Link
-					href="https://bulma.io"
-					className="has-text-centered has-image-centered"
-				>
-					<Image
-						src="/assets/img/made-with-bulma--dark.png"
-						alt="Made with Bulma"
-						className="is-inline"
-						width={256}
-						height={48}
-					/>
-				</Link>
 				{storysetAttribution && (
 					<p className="mt-4">
 						Certain illustrations by{' '}

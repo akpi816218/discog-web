@@ -4,43 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import ScriptLoader from '@/components/ScriptLoader';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 
 export const metadata: Metadata = {
-	title: 'DisCog | Invite',
-	authors: { name: 'Akhil Pillai' },
-	keywords: [],
-	creator: 'Akhil Pillai',
-	generator: 'Next.js',
-	icons: ['/logo.png'],
-	description: 'The optimal bot for your Discord server',
-	twitter: {
-		card: 'summary_large_image',
-		site: '@discogbot',
-		creator: '@akpi816218',
-		images: 'https://discog.localplayer.dev/banner.svg',
-		description: 'The optimal bot for your Discord server'
-	},
-	openGraph: {
-		title: 'DisCog | Invite',
-		description: 'The optimal bot for your Discord server',
-		url: 'https://discog.localplayer.dev',
-		siteName: 'DisCog',
-		countryName: 'United States',
-		locale: 'en-US',
-		type: 'website',
-		images: [
-			{
-				url: 'https://discog.localplayer.dev/logo.png',
-				type: 'image/png'
-			},
-			{
-				url: 'https://discog.localplayer.dev/banner.svg',
-				type: 'image/svg+xml'
-			}
-		]
-	}
+	title: 'Invite'
 };
 
 export default function InvitePage() {
@@ -59,7 +26,6 @@ export default function InvitePage() {
 							data-aos="fade-right"
 							data-aos-delay="500"
 						>
-							{/* eslint-disable-next-line @next/next/no-img-element */}
 							<img
 								className="image vert-move2"
 								src="/assets/img/discog.png"
@@ -122,6 +88,7 @@ export default function InvitePage() {
 							href="/invite/support-server"
 							className="button is-blurple is-medium"
 						>
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDiscord} className="mr-2" />
 							<strong>Get Started With Discord</strong>
 						</a>
@@ -131,6 +98,7 @@ export default function InvitePage() {
 							href="https://github.com/akpi816218/discog/discussions/new?category=server-requests"
 							className="button is-dark-blurple is-medium"
 						>
+							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGithub} className="mr-2" />
 							<strong>Get Started With GitHub</strong>
 						</a>
@@ -138,7 +106,6 @@ export default function InvitePage() {
 				</div>
 			</section>
 			<Footer />
-			<ScriptLoader />
 		</>
 	);
 }

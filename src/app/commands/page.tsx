@@ -2,44 +2,11 @@ import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
-import ScriptLoader from '@/components/ScriptLoader';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import CommandsList from '@/components/CommandsList';
 
 export const metadata: Metadata = {
-	title: 'DisCog | About the Developer',
-	authors: { name: 'Akhil Pillai' },
-	keywords: [],
-	creator: 'Akhil Pillai',
-	generator: 'Next.js',
-	icons: ['/logo.png'],
-	description: 'The optimal bot for your Discord server',
-	twitter: {
-		card: 'summary_large_image',
-		site: '@discogbot',
-		creator: '@akpi816218',
-		images: 'https://discog.localplayer.dev/banner.svg',
-		description: 'The optimal bot for your Discord server'
-	},
-	openGraph: {
-		title: 'DisCog | About the Developer',
-		description: 'The optimal bot for your Discord server',
-		url: 'https://discog.localplayer.dev',
-		siteName: 'DisCog',
-		countryName: 'United States',
-		locale: 'en-US',
-		type: 'website',
-		images: [
-			{
-				url: 'https://discog.localplayer.dev/logo.png',
-				type: 'image/png'
-			},
-			{
-				url: 'https://discog.localplayer.dev/banner.svg',
-				type: 'image/svg+xml'
-			}
-		]
-	}
+	title: 'Commands Reference'
 };
 
 export default function AboutTheDevPage() {
@@ -92,7 +59,6 @@ export default function AboutTheDevPage() {
 				<CommandsList />
 			</section>
 			<Footer />
-			<ScriptLoader />
 		</>
 	);
 }

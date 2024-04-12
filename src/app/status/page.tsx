@@ -1,5 +1,5 @@
-import Script from 'next/script';
+import { permanentRedirect } from 'next/navigation';
 
 export default function StatusPageRedirectPage() {
-	return <Script src="/assets/js/statusRedirect.js" />;
+	permanentRedirect('https://discog.openstatus.dev');
 }
