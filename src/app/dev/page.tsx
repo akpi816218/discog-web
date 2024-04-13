@@ -7,7 +7,6 @@ import {
 	faSteam,
 	faYoutube
 } from '@fortawesome/free-brands-svg-icons';
-import BackToTop from '@/components/BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '@/components/Footer';
 import Image from 'next/legacy/image';
@@ -24,8 +23,6 @@ export const metadata: Metadata = {
 export default function AboutTheDevPage() {
 	return (
 		<>
-			<BackToTop />
-
 			<Nav />
 
 			<section className="hero bg-base is-fullheight pb-12">

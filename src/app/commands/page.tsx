@@ -1,4 +1,3 @@
-import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
@@ -12,8 +11,6 @@ export const metadata: Metadata = {
 export default function AboutTheDevPage() {
 	return (
 		<>
-			<BackToTop />
-
 			<Nav />
 
 			<section className="hero bg-base is-fullheight pb-12">

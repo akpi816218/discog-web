@@ -1,10 +1,12 @@
 import { faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import BackToTop from '@/components/BackToTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from '@/components/Footer';
 import { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
+import Image from 'next/image';
+import ScrollTarget from '@/components/ScrollTarget';
+import { Button } from '@nextui-org/react';
 
 export const metadata: Metadata = {
 	title: 'Invite'
@@ -13,41 +15,33 @@ export const metadata: Metadata = {
 export default function InvitePage() {
 	return (
 		<>
-			<BackToTop />
-
 			<Nav />
 
-			<section className="hero bg-base is-fullheight pb-6">
-				<div className="hero-head"></div>
-				<div className="hero-body">
-					<div className="mt-6 columns">
-						<div
-							className="column has-text-centered"
-							data-aos="fade-right"
-							data-aos-delay="500"
-						>
-							<img
-								className="image vert-move2"
-								src="/assets/img/discog.png"
-								width={409}
-								height={409}
-								alt="logo image"
-							/>
-						</div>
-						<div
-							className="column has-text-right mt-12"
-							data-aos="fade-down"
-							data-aos-delay="500"
-						>
-							<h1 className="is-size-1 has-text-weight-bold has-text-white has-text-right">
-								Get your server ready for{' '}
-								<span className="blurple">DisCog</span>!
-							</h1>
-						</div>
+			<section className="bg-base min-h-[100vh] mt-[var(--navbar-height)] px-12 py-24 flex flex-col items-stretch">
+				<div className="grow flex flex-row items-stretch gap-8">
+					<div className="flex flex-col justify-center gap-8 animate-fade-in-top">
+						<p className="text-3xl text-white font-bold">
+							Time to add DisCog to your server!
+						</p>
+						<p className="text-neutral-400 text-lg">
+							DisCog is a free and open-source Discord bot made to simplify your
+							Discord experience.
+						</p>
+					</div>
+					<div className="place-content-center hidden md:grid">
+						<Image
+							className="image vert-move animate-fade-in-left"
+							src="/logo.png"
+							width={409}
+							height={409}
+							alt="logo image"
+							priority
+						/>
 					</div>
 				</div>
-				<ScrollDownChevron target="invite" />
+				<ScrollDownChevron target="1" />
 			</section>
+			<ScrollTarget name="1" />
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
@@ -57,51 +51,64 @@ export default function InvitePage() {
 				></path>
 			</svg>
 
-			<section className="section mt-6 has-text-centered" id="invite">
-				<h2 className="title has-text-weight-bold is-size-3">
+			<section className="mt-6 text-center p-12" id="invite">
+				<h2 className="text-2xl font-bold">
 					Are you convinced that <span className="blurple">DisCog</span> is the
 					bot you&apos;re looking for?
 				</h2>
-				<p className="subtitle lined mt-4 mb-0 has-text-gray is-size-4">
-					You&apos;ve got two options to get set up:
-				</p>
-				<div className="line3 line-center dark-blurple"></div>
-				<div className="columns mt-4 is-size-5">
-					<div className="column has-text-black">
+				<br />
+				<div className="flex flex-col items-center">
+					<div className="flex flex-col items-stretch w-fit">
+						<h1 className="text-center font-semibold text-neutral-400">
+							{' '}
+							You&apos;ve got two options to get set up:
+						</h1>
+						<div className="bg-dark-blurple h-1" />
+					</div>
+				</div>
+				<div className="flex flex-col lg:flex-row gap-8 mt-4 text-xl">
+					<p className="p-2 bg-neutral-200 rounded-2xl">
 						Contact the developers directly through the support server. This is
 						the simplest and fastest way to get set up for all! When you&apos;re
 						ready, join the official bot support server and get in touch with
 						one of the developers, who will guide you to add DisCog to your
 						server.
-					</div>
-					<div className="column block has-text-black">
+					</p>
+					<p className="p-2 bg-neutral-200 rounded-2xl">
 						Alternatively, you can create a server request on GitHub. This is a
 						bit more complicated, but it&apos;s a good option if you&apos;re a
 						developer. When you&apos;re ready, create a new issue in the
 						official GitHub repository and follow instructions to create a
 						server request.
-					</div>
+					</p>
 				</div>
-				<div className="columns">
-					<div className="column">
-						<a
+				<div className="flex flex-col lg:flex-row gap-4 mt-4 text-xl lg:justify-stretch">
+					<div className="flex flex-row justify-center grow">
+						<Button
 							href="/invite/support-server"
-							className="button is-blurple is-medium"
+							target="_blank"
+							as="a"
+							color="secondary"
+							className="text-white"
 						>
 							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faDiscord} className="mr-2" />
 							<strong>Get Started With Discord</strong>
-						</a>
+						</Button>
 					</div>
-					<div className="column">
-						<a
+					<div className="flex flex-row justify-center grow">
+						<Button
 							href="https://github.com/akpi816218/discog/discussions/new?category=server-requests"
-							className="button is-dark-blurple is-medium"
+							target="_blank"
+							rel="noreferrer noopener"
+							as="a"
+							color="secondary"
+							className="bg-dark-blurple text-white"
 						>
 							{/* @ts-expect-error */}
 							<FontAwesomeIcon icon={faGithub} className="mr-2" />
 							<strong>Get Started With GitHub</strong>
-						</a>
+						</Button>
 					</div>
 				</div>
 			</section>

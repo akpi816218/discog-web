@@ -1,25 +1,16 @@
-'use client';
-
-import BackToTop from '@/components/BackToTop';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Nav from '@/components/Nav';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import Code from '@/components/Code';
 import Counter from '@/components/Counter';
-import { Button, Link } from '@nextui-org/react';
-import {
-	Element,
-	Link as ScrollLink,
-	animateScroll,
-	scrollSpy
-} from 'react-scroll';
+import { Button } from '@nextui-org/react';
+import ScrollTarget from '@/components/ScrollTarget';
+import ScrollLink from '@/components/ScrollLink';
 
 export default function HomePage() {
 	return (
 		<>
-			<BackToTop />
-
 			<Nav />
 
 			<section className="bg-base min-h-[100vh] mt-[var(--navbar-height)] px-12 py-24 flex flex-col items-stretch">
@@ -35,8 +26,6 @@ export default function HomePage() {
 						<div className="flex flex-row justify-center">
 							<ScrollLink
 								to="invite"
-								spy
-								smooth
 								duration={250}
 								className="py-3 px-4 rounded-2xl bg-neutral-200 font-medium text-lg text-blurple hover:cursor-pointer hover:bg-neutral-300 hover:scale-95"
 							>
@@ -51,12 +40,13 @@ export default function HomePage() {
 							width={409}
 							height={409}
 							alt="logo image"
+							priority
 						/>
 					</div>
 				</div>
 				<ScrollDownChevron target="features" />
 			</section>
-			<Element name="features" />
+			<ScrollTarget name="features" />
 
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 				<path
@@ -150,7 +140,7 @@ export default function HomePage() {
 					</div>
 				</div>
 
-				{/* <Counter /> */}
+				<Counter />
 			</section>
 
 			<section id="status" className="mt-6">
@@ -167,41 +157,12 @@ export default function HomePage() {
 					</Button>
 				</div>
 			</section>
-			<Element name="invite" />
+			<ScrollTarget name="invite" />
 
 			<section
 				className="mt-6 px-12 py-24 flex flex-col items-stretch bg-[#464d53]"
 				id="invite"
 			>
-				{/* <div className="columns">
-					<div className="column has-text-left">
-						<p className="title has-text-weight-bold">
-							Ready to try <span className="blurple">DisCog</span>?
-						</p>
-						<p className="subtitle mt-3 has-text-gray">
-							Get in contact with the developers and get DisCog in your server
-							today!{' '}
-							<span className="has-text-grey is-size-6">
-								(Don&apos;t worry, we don&apos;t bite ...unless you diss us.)
-							</span>{' '}
-							We&apos;re always looking for new servers to have our bot in.
-						</p>
-						<Link href="/invite" className="button is-dark-blurple is-medium">
-							<strong>Get Started</strong>
-						</Link>
-					</div>
-
-					<div className="column has-text-centered">
-						<Image
-							alt="rocket launch"
-							className="h10m wauto"
-							src="/assets/img/relaunch_day.svg"
-							width={754 / 2}
-							height={750 / 2}
-							priority={true}
-						/>
-					</div>
-				</div> */}
 				<div className="grow flex flex-row items-stretch gap-8">
 					<div className="flex flex-col justify-center gap-8 basis-4 grow">
 						<p className="text-3xl text-white font-bold">
