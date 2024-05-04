@@ -24,7 +24,6 @@ export default function Nav() {
 	const menuItems = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Invite', href: '/invite/' },
-		{ name: 'About the Dev', href: '/dev/' },
 		{ name: 'Commands', href: '/commands/' }
 	];
 

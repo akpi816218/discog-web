@@ -3,7 +3,7 @@
 		"@fortawesome/free-brands-svg-icons": "^6.5.2",
 		"@fortawesome/free-solid-svg-icons": "^6.5.2",
 		"@fortawesome/react-fontawesome": "^0.2.0",
-		"@nextui-org/react": "^2.2.10",
+		"@nextui-org/react": "^2.3.6",
 		"react-scroll": "^1.9.0"
 	},
 	"private": true,
@@ -19,15 +19,15 @@
 	},
 	"type": "module",
 	"devDependencies": {
-		"@types/node": "20.12.7",
-		"@types/react": "18.2.77",
-		"@types/react-dom": "18.2.25",
+		"@types/node": "20.12.8",
+		"@types/react": "18.3.1",
+		"@types/react-dom": "18.3.0",
 		"@types/react-scroll": "^1.8.10",
-		"next": "^14.2.1",
-		"npm-check-updates": "^16.14.18",
+		"next": "14.1",
+		"npm-check-updates": "^16.14.20",
 		"prettier": "^3.2.5",
-		"react": "^18.2.0",
-		"react-dom": "18.2.0",
+		"react": "^18.3.1",
+		"react-dom": "18.3.1",
 		"tailwindcss": "^3.4.3",
 		"typescript": "5.4.5"
 	}
