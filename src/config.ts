@@ -1,1 +1,1 @@
-export const API_BASE = 'https://discog.akpi816218.repl.co/api';
+export const API_BASE = 'https://api.discog.opensourceforce.net/';

@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import ScrollDownChevron from '@/components/ScrollDownChevron';
 import CommandsList from '@/components/CommandsList';
+import { Link, Spacer } from '@nextui-org/react';
+import ScrollTarget from '@/components/ScrollTarget';
 
 export const metadata: Metadata = {
 	title: 'Commands Reference'
@@ -13,29 +15,18 @@ export default function AboutTheDevPage() {
 		<>
 			<Nav />
 
-			<section className="hero bg-base is-fullheight pb-12">
-				<div className="hero-body">
-					<div className="columns">
-						<div
-							className="column mr-6 mb-12"
-							data-aos="fade-left"
-							data-aos-delay="0"
-							data-aos-duration="500"
-						>
-							<h1 className="title has-text-white has-text-weight-bold has-text-centered is-size-1">
-								Commands Documentation
-							</h1>
-						</div>
-						<div
-							className="column mt-12"
-							data-aos="fade-right"
-							data-aos-delay="500"
-							data-aos-duration="500"
-						>
-							<p className="title has-text-weight-light has-text-white">
-								A quick reference for all of DisCog&apos;s commands.
-							</p>
-						</div>
+			<section className="grow bg-base min-h-[80vh] px-12 py-24 lg:px-32 flex flex-col items-stretch justify-center gap-16 lg:gap-32">
+				<Spacer y={4} />
+				<div className="flex flex-row items-stretch gap-16 lg:gap-32">
+					<div className="grow-[6] shrink-0 flex flex-col justify-center animate-fade-in-top">
+						<h1 className="text-3xl text-white font-bold text-right">
+							Commands Documentation
+						</h1>
+					</div>
+					<div className="grow-[3] grid place-content-center">
+						<p className="text-2xl text-white">
+							A quick reference for all of DisCog&apos;s commands.
+						</p>
 					</div>
 				</div>
 				<ScrollDownChevron target="cmnds" />
@@ -49,10 +40,8 @@ export default function AboutTheDevPage() {
 				></path>
 			</svg>
 
-			<section
-				className="mt-6 mx-auto border-[var(--blurple)] border-solid border-4"
-				id="commandslist"
-			>
+			<ScrollTarget name="cmnds" />
+			<section className="mt-6 m-4" id="commandslist">
 				<CommandsList />
 			</section>
 			<Footer />

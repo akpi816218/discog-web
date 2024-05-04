@@ -38,25 +38,6 @@ export default function Err404Page() {
 						</div>
 					</div>
 				</section>
-				{/* <section className="grow flex flex-col lg:flex-row justify-center items-center gap-8 px-16 py-24 lg:px-24 lg:py-32 bg-base">
-					<div className="grow self-start lg:basis-24 flex flex-row justify-end">
-						<h1 className="text-white text-3xl"></h1>
-					</div>
-					<div className="grow lg:basis-96 flex flex-col items-end">
-						<h2 className="text-white">
-							Hello, Gretel. Or are you Hansel? Looks like you&apos;re lost in
-							the digital wilderness. Don&apos;t worry, we always keep some
-							breadcrumbs to help <s>foolish meals of tender flesh like you</s>{' '}
-							<em>I mean poor lost souls such as you</em> find your way back
-							out. Not all witches are bad, you know.
-							<br />
-							&mdash;The (Not Bad?) Witch
-						</h2>
-						<Button color="warning" href="/" size="lg">
-							Go back to the homepage
-						</Button>
-					</div>
-				</section> */}
 				<Footer />
 			</main>
 		</>
