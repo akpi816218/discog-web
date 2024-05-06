@@ -1,5 +1,5 @@
 import { permanentRedirect } from 'next/navigation';
 
-export default function GET() {
+export async function GET() {
 	permanentRedirect('https://discog.openstatus.dev');
 }
